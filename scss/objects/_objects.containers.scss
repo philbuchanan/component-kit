@@ -28,6 +28,24 @@
 
 
 
+// ## Container Colors
+// -----------------------------------------------------------------------------
+
+.c-container--grey {
+	background-color: $grey-faint;
+	border: 1px solid $color-border--light;
+	border-radius: $border-radius;
+
+	code {
+		background-color: transparent;
+		border-radius: 0;
+		border: 0;
+		padding: 0;
+	}
+}
+
+
+
 // ## Miscellaneous
 // -----------------------------------------------------------------------------
 

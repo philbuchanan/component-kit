@@ -217,29 +217,9 @@ code {
   color: #96268a;
   background-color: #f2f2f2;
   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-  font-size: 0.8em;
   border: 1px solid #e5e5e5;
   border-radius: 2px;
-  padding: 1px 3px 0;
-}
-
-pre {
-  background-color: #f2f2f2;
-  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-  font-size: 0.8em;
-  border: 1px solid #e5e5e5;
-  border-radius: 2px;
-  padding: 12px;
-}
-
-pre code {
-  display: inline;
-  background-color: transparent;
-  font-size: 1em;
-  max-width: auto;
-  border-radius: 0;
-  border: 0;
-  padding: 0;
+  padding: 0.1em 0.25em;
 }
 
 hr {
@@ -414,6 +394,19 @@ input[type="search"]::-webkit-search-results-decoration {
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+}
+
+.c-container--grey {
+  background-color: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.c-container--grey code {
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+  padding: 0;
 }
 
 .o-scrollable {

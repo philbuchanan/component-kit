@@ -74,29 +74,9 @@ code {
 	color: #96268a;
 	background-color: $grey-faint;
 	font-family: $font-family-mono;
-	font-size: 0.8em;
 	border: 1px solid $color-border--light;
 	border-radius: 2px;
-	padding: 1px 3px 0;
-}
-
-pre {
-	background-color: $grey-faint;
-	font-family: $font-family-mono;
-	font-size: 0.8em;
-	border: 1px solid $color-border--light;
-	border-radius: 2px;
-	padding: 12px;
-
-	code {
-		display: inline;
-		background-color: transparent;
-		font-size: 1em;
-		max-width: auto;
-		border-radius: 0;
-		border: 0;
-		padding: 0;
-	}
+	padding: 0.1em 0.25em;
 }
 
 hr {
