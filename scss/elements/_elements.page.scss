@@ -1,0 +1,16 @@
+// # Elements: Page
+// -----------------------------------------------------------------------------
+
+// 1. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+//    navigating between pages that do/do not have enough content to produce
+//    scrollbars naturally.
+// 2. Ensure the page always fills at least the entire height of the viewport.
+
+html {
+	color: $color-text;
+	font-family: $font-family-sans-serif;
+	font-size: $global-font-size;
+	line-height: $global-line-height;
+	overflow-y: scroll; // [1]
+	min-height: 100%; // [2]
+}

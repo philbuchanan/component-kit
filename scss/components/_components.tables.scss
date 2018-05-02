@@ -1,0 +1,15 @@
+// # Components: Tables
+// -----------------------------------------------------------------------------
+
+.c-table__column--sortable {
+	&:hover {
+		cursor: pointer;
+		background-color: darken($color-primary, 7%);
+	}
+}
+
+.c-table--alternate-rows {
+	tr:nth-child(even) {
+		background-color: $grey-faint;
+	}
+}

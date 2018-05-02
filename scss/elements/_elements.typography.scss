@@ -1,0 +1,136 @@
+// # Elements: Typography
+// -----------------------------------------------------------------------------
+
+h1,
+.c-h1 {
+	font-size: $font-size-h1;
+	font-weight: $font-weight-normal;
+}
+
+h2,
+.c-h2 {
+	font-size: $font-size-h2;
+	font-weight: $font-weight-bold;
+}
+
+h3,
+.c-h3 {
+	font-size: $font-size-h3;
+	font-weight: $font-weight-bold;
+}
+
+h4,
+.c-h4 {
+	font-size: $font-size-h4;
+	font-weight: $font-weight-bold;
+}
+
+h5,
+.c-h5 {
+	font-size: $font-size-h5;
+	font-weight: $font-weight-bold;
+	text-transform: uppercase;
+}
+
+h6,
+.c-h6 {
+	font-size: $font-size-h6;
+	font-weight: $font-weight-bold;
+}
+
+strong {
+	font-weight: $font-weight-bold;
+}
+
+em {
+	font-style: italic;
+}
+
+sub,
+sup {
+	vertical-align: baseline;
+	font-size: 0.8em;
+	position: relative;
+	top: -0.5em;
+}
+
+sub {
+	top: 0.3em;
+}
+
+ins {
+	text-decoration: underline;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+small {
+	font-size: $font-size-h6;
+}
+
+code {
+	color: #96268a;
+	background-color: $grey-faint;
+	font-family: $font-family-mono;
+	font-size: 0.8em;
+	border: 1px solid $color-border--light;
+	border-radius: 2px;
+	padding: 1px 3px 0;
+}
+
+pre {
+	background-color: $grey-faint;
+	font-family: $font-family-mono;
+	font-size: 0.8em;
+	border: 1px solid $color-border--light;
+	border-radius: 2px;
+	padding: 12px;
+
+	code {
+		display: inline;
+		background-color: transparent;
+		font-size: 1em;
+		max-width: auto;
+		border-radius: 0;
+		border: 0;
+		padding: 0;
+	}
+}
+
+hr {
+	border: solid $color-border--light;
+	border-width: 1px 0 0;
+	height: 0;
+}
+
+
+
+// ## Lists
+// -----------------------------------------------------------------------------
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li ul,
+li ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+// 1. Consistent indentation for lists
+
+dd,
+ol,
+ul {
+	margin-left: 1.3333rem; // [1]
+}

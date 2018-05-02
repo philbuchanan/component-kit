@@ -1,0 +1,24 @@
+// # Utilities: Positioning and Floats
+// -----------------------------------------------------------------------------
+
+// ## Positions
+// -----------------------------------------------------------------------------
+
+.u-relative {
+	position: relative !important;
+}
+
+
+
+// ## Alignment
+// -----------------------------------------------------------------------------
+
+// 1. So we can apply the `.u-center` class on naturally-inline elements
+// 2. Clear any floats that may be applied to the element
+
+.u-center {
+	display: block !important; // [1]
+	float: none !important; // [2]
+	margin-left: auto !important;
+	margin-right: auto !important;
+}

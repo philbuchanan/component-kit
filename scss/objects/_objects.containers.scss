@@ -1,0 +1,42 @@
+// # Objects: Containers
+// -----------------------------------------------------------------------------
+
+.o-container--tiny {
+	width: 250px;
+}
+
+.o-container--small {
+	width: 400px;
+}
+
+.o-container--medium {
+	max-width: 600px;
+}
+
+.o-container--large {
+	max-width: 900px;
+}
+
+// Responsive conainer
+
+.c-container--responsive {
+	max-width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+// ## Miscellaneous
+// -----------------------------------------------------------------------------
+
+// Scrollable container
+
+.o-scrollable {
+	overflow-y: scroll;
+}
+
+.o-scrollable--small {
+	max-height: 265px;
+}

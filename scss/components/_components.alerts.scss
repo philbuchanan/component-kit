@@ -1,0 +1,26 @@
+// # Components: Alerts
+// -----------------------------------------------------------------------------
+
+.c-alert {
+	position: relative;
+	width: 100%;
+	background-color: $grey-faint;
+	border-radius: $border-radius;
+	margin-bottom: $global-spacing-unit;
+
+	+ .c-alert {
+		margin-top: -($global-spacing-unit - 4);
+	}
+}
+
+.c-alert--success {
+	background-color: #e1f5f0;
+}
+
+.c-alert--warning {
+	background-color: #fffdce;
+}
+
+.c-alert--error {
+	background-color: #f5e1e1;
+}

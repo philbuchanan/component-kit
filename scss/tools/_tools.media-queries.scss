@@ -1,0 +1,40 @@
+// # Media Queries
+// -----------------------------------------------------------------------------
+
+// Define media queries
+// Usage Example:
+// @include respond-to(medium) {
+//     // Responsive styles that apply to medium screens and up go here
+// }
+
+@mixin respond-to($breakpoint) {
+	$value: map-get($breakpoints, $breakpoint);
+
+	@media screen and (min-width: $value) {
+		@content;
+	}
+}
+
+@mixin respond-to-tiny-only {
+	@media screen and (max-width: (map-get($breakpoints, small) - 1)) {
+		@content;
+	}
+}
+
+@mixin respond-to-small-only {
+	@media screen and (min-width: map-get($breakpoints, small)) and (max-width: (map-get($breakpoints, medium) - 1)) {
+		@content;
+	}
+}
+
+@mixin respond-to-medium-only {
+	@media screen and (min-width: map-get($breakpoints, medium)) and (max-width: (map-get($breakpoints, large) - 1)) {
+		@content;
+	}
+}
+
+@mixin respond-to-large-only {
+	@media screen and (min-width: map-get($breakpoints, large)) {
+		@content;
+	}
+}

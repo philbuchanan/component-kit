@@ -1,0 +1,57 @@
+// # Components: Modals
+// -----------------------------------------------------------------------------
+
+// 1. Modals are hidden by default
+
+.c-modal {
+	display: none; // [1]
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $overlay;
+	overflow-y: scroll;
+	z-index: $z-index-modal;
+	@include animate();
+	@include animation('fadeIn');
+	-webkit-backdrop-filter: blur(3px);
+	        backdrop-filter: blur(3px);
+
+	&.is-open {
+		display: block;
+	}
+
+	&.is-closing {
+		display: block;
+		@include animation('fadeOut');
+
+		.c-modal__content {
+			@include animation('slideOutDown');
+		}
+	}
+}
+
+.c-modal__container {
+	position: relative;
+	display: block;
+	background-color: #fff;
+	border-radius: $border-radius;
+	margin: 10vh auto;
+	box-shadow: $dropshadow;
+	@include animate();
+	@include animation('slideInUp');
+}
+
+.c-modal__close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: $color-link;
+	text-align: center;
+	font-size: $font-size-h1;
+	line-height: 1;
+	width: 35px;
+	height: 35px;
+	padding: 0 0 4px;
+}

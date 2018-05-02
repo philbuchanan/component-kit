@@ -1,0 +1,39 @@
+// # Components: Pagination
+// -----------------------------------------------------------------------------
+
+.c-pagination__item {
+	display: inline-block;
+	color: $grey;
+	font-size: $font-size-h4;
+	font-weight: $font-weight-bold;
+
+	&:not(:last-child) {
+		margin-right: 2px;
+	}
+
+	&.is-selected .c-pagination__link {
+		color: #fff;
+		background-color: $color-primary;
+		text-decoration: none;
+	}
+}
+
+.c-pagination__link {
+	display: inline-block;
+	color: $color-link;
+	border-radius: $border-radius;
+	padding: 6px 10px;
+
+	&:focus {
+		box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px $color-primary;
+	}
+
+	&:hover {
+		background-color: $color-hover-bg;
+	}
+
+	&:active {
+		position: relative;
+		top: 1px;
+	}
+}

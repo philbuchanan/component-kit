@@ -1,0 +1,27 @@
+// # Elements: Tables
+// -----------------------------------------------------------------------------
+
+// 1. Ensure tables fill up as much space as possible.
+
+table {
+	width: 100%; // [1]
+}
+
+th,
+td {
+	text-align: left;
+	vertical-align: top;
+}
+
+th,
+td {
+	text-align: left;
+	vertical-align: top;
+	padding: $global-spacing-unit-small $global-spacing-unit;
+}
+
+th {
+	color: #fff;
+	background-color: $color-primary;
+	font-weight: $font-weight-bold;
+}

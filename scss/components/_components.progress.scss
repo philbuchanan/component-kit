@@ -1,0 +1,53 @@
+// # Components: Progress
+// -----------------------------------------------------------------------------
+
+$progress-height: 14px;
+
+.c-progress {
+	@include clearfix();
+	margin-bottom: $global-spacing-unit;
+}
+
+.c-progress__track {
+	display: block;
+	background: $grey-faint;
+	width: 100%;
+	height: $progress-height;
+	border-radius: $border-radius;
+	box-shadow: $dropshadow--inset;
+}
+
+.c-progress__bar {
+	background-color: $color-primary;
+	border-radius: $border-radius;
+	height: $progress-height;
+	margin-bottom: $global-spacing-unit-tiny;
+	transition: width $duration-slow;
+}
+
+.c-progress__description {
+	font-size: $font-size-h5;
+	font-style: italic;
+}
+
+.c-progress__bar--striped {
+	background-image: linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+	background-size: $progress-height $progress-height;
+	@include animate(1s, linear);
+	@include animation(progress-bar-stripes);
+	@include animation-count(infinite);
+}
+
+
+
+// ## Progress Stripes Animation
+// -----------------------------------------------------------------------------
+
+@keyframes progress-bar-stripes {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: $progress-height 0;
+	}
+}

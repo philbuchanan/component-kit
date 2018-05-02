@@ -1,0 +1,126 @@
+// # Settings: Sass Variables
+// -----------------------------------------------------------------------------
+
+// ## Color Variables
+// -----------------------------------------------------------------------------
+
+// Colors
+$grey-faint:                        #f2f2f2; // 95%
+$grey-light:                        #e5e5e5; // 90%
+$grey:                              #bfbfbf; // 75%
+$grey-dark:                         #4d4d4d; // 30%
+
+$color-primary:                     #7342ab;
+
+$color-text:                        #000;
+
+$color-link:                        $color-primary;
+
+$color-border:                      $grey;
+$color-border--light:               $grey-light;
+
+$color-error:                       #e00;
+$color-success:                     #080;
+$color-warning:                     #856404;
+
+$color-hover-bg:                    rgba($color-primary, 0.07);
+
+
+
+// ## Typography
+// -----------------------------------------------------------------------------
+
+$font-family-sans-serif:            -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-mono:                  "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+
+$global-font-size:                  13px;
+$global-line-height:                1.5;
+
+$global-spacing-unit:               24px;
+$global-spacing-unit-tiny:          round($global-spacing-unit * 0.25);
+$global-spacing-unit-small:         round($global-spacing-unit * 0.5);
+$global-spacing-unit-large:         round($global-spacing-unit * 1.5);
+$global-spacing-unit-huge:          round($global-spacing-unit * 2);
+
+$font-size-h1:                      1.85rem;
+$font-size-h2:                      1.333333rem;
+$font-size-h3:                      1.1rem;
+$font-size-h4:                      1rem;
+$font-size-h5:                      0.9rem;
+$font-size-h6:                      0.85rem;
+
+$font-weight-light:                 300;
+$font-weight-normal:                400;
+$font-weight-bold:                  600;
+
+
+
+// ## Grid
+// -----------------------------------------------------------------------------
+
+$wrapper-width:                     1200px;
+$min-width:                         840px;
+$fractions:                         (12);
+$gutter:                            round($global-spacing-unit * 0.5);
+
+$breakpoints: (
+	small:  475px,
+	medium: 640px,
+	large:  900px,
+);
+
+
+
+// ## Properties & Sizes
+// -----------------------------------------------------------------------------
+
+$properties: (
+	margin,
+	padding,
+);
+
+$sides: (
+	top,
+	bottom,
+);
+
+$sizes: (
+	small:  $global-spacing-unit-small,
+	medium: $global-spacing-unit,
+	large:  $global-spacing-unit-large,
+);
+
+$border-radius:                     3px;
+
+
+
+// ## Z-Index
+// -----------------------------------------------------------------------------
+
+$z-index-skip-link:                 900;
+$z-index-dropdown:                  500;
+$z-index-modal:                     300;
+$z-index-navigation:                100;
+$z-index-animations:                 10;
+$z-index:                             1;
+
+
+
+// ## Drop Shadows & Overlays
+// -----------------------------------------------------------------------------
+
+$overlay:                           rgba(0, 0, 0, 0.5);
+$dropshadow:                        0 1px 5px rgba(0, 0, 0, 0.35);
+$dropshadow--light:                 0 1px 3px rgba(0, 0, 0, 0.15);
+$dropshadow--inset:                 inset 0 1px 2px rgba(0, 0, 0, 0.1);
+
+
+
+// ## Durations
+// -----------------------------------------------------------------------------
+
+$duration:                          0.2s;
+$duration-fast:                     0.1s;
+$duration-slow:                     1s;
+
+$animation-easing:                  cubic-bezier(0.66, 0, 0.33, 1);

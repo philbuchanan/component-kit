@@ -1,0 +1,8 @@
+// # Utilities: Borders
+// -----------------------------------------------------------------------------
+
+@each $side in $sides {
+	.u-border-#{$side} {
+		border-#{$side}: 1px solid $color-border--light !important;
+	}
+}

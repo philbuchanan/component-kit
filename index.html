@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Component Kit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<a class="u-sr-only u-skip-link" href="#content">Skip to content</a>
+		<main id="content">
+			<div class="o-box u-border-bottom">
+				<h1>Component Kit</h1>
+				<p>A modular, scalable, Sass-based, OOCSS framework for quick development of web application interfaces.</p>
+			</div>
+			<div class="o-box u-border-bottom">
+				<h2>Typography</h2>
+				<h1>Main heading</h1>
+				<h2>Subpage title</h2>
+				<h3>Section header</h3>
+				<h4>Labels</h4>
+				<p><strong>Bold content within body</strong></p>
+				<p>The children groped their way back to the spring. The weary time dragged on; they slept again, and awoke famished and woe-stricken. <a href="#">Tom believed it must be Tuesday</a> by this time.</p>
+				<p class="u-text-small">Meta content</p>
+			</div>
+			<div class="o-box">
+				<h2>Buttons</h2>
+				<button class="c-button c-button--primary">Primary Button</button>
+				<button class="c-button">Regular Button</button>
+				<button class="c-button c-button--danger">Danger Button</button>
+				<button class="c-button c-button--link">Link Button</button>
+				<input type="reset" value="Reset" class="c-button c-button--link c-button--danger">
+			</div>
+			<div class="o-box">
+				<button class="c-button c-button--primary" disabled>Disabled Primary Button</button>
+				<button class="c-button" disabled>Disabled Regular Button</button>
+				<button class="c-button c-button--danger" disabled>Disabled Danger Button</button>
+				<button class="c-button c-button--link" disabled>Disabled Link Button</button>
+				<input type="reset" value="Reset" class="c-button c-button--link c-button--danger" disabled>
+			</div>
+			<div class="o-box u-border-bottom">
+				<button class="c-button c-button--primary c-button--full-width">Full Width Button</button>
+			</div>
+			<div class="o-box u-border-bottom">
+				<h2>Modals</h2>
+				<p>Modals should only be used when blocking the user from taking any other action is absolutely necessary.</p>
+				<p>All modals must have a heading (<code>&lt;h2&gt;</code>).</p>
+				<button class="c-button c-button--primary js-open-modal">Open Modal</button>
+				<div class="c-modal js-modal">
+					<div class="o-container--medium u-center">
+						<div class="c-modal__container">
+							<div class="o-box c-modal__content">
+								<div class="o-island">
+									<h2>Revert Recovery Key?</h2>
+									<p>Cancelling now will discard the new recovery key you just generated and your account will revert to your old recovery key.</p>
+								</div>
+								<button class="c-button c-button--primary js-close-modal">Revert to Old Recovery Key</button> <button type="reset" class="c-button js-close-modal">Keep New Recovery Key</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="c-button c-button--primary js-open-2fa-modal">Model with Close Button</button>
+				<div class="c-modal js-2fa-modal">
+					<div class="o-container--small u-center">
+						<div class="c-modal__container">
+							<div class="o-box">
+								<h2>Your Two-Factor Secret Key</h2>
+								<p class="u-text-big"><code>sedw gyiu kptt oqvu</code></p>
+							</div>
+							<button class="o-button-bare c-modal__close-button js-close-2fa-modal" aria-label="Close"><img src="images/icons/close.svg" alt="" width="11" height="11"></button>
+						</div>
+					</div>
+				</div>
+				<button class="c-button c-button--primary js-open-form-modal">Modal with Form</button>
+				<div class="c-modal js-form-modal">
+					<div class="o-container--medium u-center">
+						<div class="c-modal__container">
+							<form action="" method="get">
+								<div class="o-box">
+									<h2>Sorry to see you go!</h2>
+									<p>We'd love to know why you decided to downgrade.</p>
+									<div class="c-field">
+										<fieldset class="c-choice-list">
+											<legend class="c-field__label">Please select up to 3 items</legend>
+											<ul class="o-list-bare c-choice-list__choices">
+												<li class="c-choice-list__item">
+													<label class="c-checkbox">
+														<input type="checkbox" class="c-checkbox__input">
+														<span class="c-checkbox__label">Lacking features</span>
+													</label>
+												</li>
+												<li class="c-choice-list__item">
+													<label class="c-checkbox">
+														<input type="checkbox" class="c-checkbox__input">
+														<span class="c-checkbox__label">Confusing interface</span>
+													</label>
+												</li>
+												<li class="c-choice-list__item">
+													<label class="c-checkbox">
+														<input type="checkbox" class="c-checkbox__input">
+														<span class="c-checkbox__label">Account made in error</span>
+													</label>
+												</li>
+											</ul>
+										</fieldset>
+									</div>
+									<div class="c-field">
+										<label class="c-textarea">
+											<span class="c-field__label">Tell us more, if you'd like</span>
+											<textarea class="c-textarea__input"></textarea>
+											<span class="c-field__help-text">Maximum 300 characters</span>
+										</label>
+									</div>
+									<button class="c-button c-button--primary js-close-form-modal">Submit Feedback</button> <button type="reset" class="c-button c-button--link js-close-form-modal">No thanks</button>
+								</div>
+							</form>
+							<button class="o-button-bare c-modal__close-button js-close-form-modal" aria-label="Close"><img src="images/icons/close.svg" alt="" width="11" height="11"></button>
+						</div>
+					</div>
+				</div>
+				<button class="c-button c-button--danger js-open-delete-modal">Delete Users</button>
+				<div class="c-modal js-delete-modal">
+					<div class="o-container--medium u-center">
+						<div class="c-modal__container">
+							<form action="" method="get">
+								<div class="o-box">
+									<h2>Delete 2 Users?</h2>
+									<p>Deleting users will permanently delete all data associated with them.</p>
+									<div class="c-field">
+										<label class="c-input">
+											<span class="c-field__label c-field__label--required">Type <code>DELETE</code> to confirm</span>
+											<input type="text" class="c-input__input js-delete-input" required>
+										</label>
+									</div>
+									<button class="c-button c-button--danger js-close-delete-modal js-delete-button" disabled="">Delete 2 Users</button> <button type="reset" class="c-button c-button--link js-close-delete-modal">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="o-box u-border-bottom">
+				<h2>Alerts</h2>
+				<div class="c-alert">
+					<div class="o-box o-box--small">
+						<p>The children groped their way back to the spring.</p>
+					</div>
+				</div>
+				<div class="c-alert c-alert--success">
+					<div class="o-box o-box--small">
+						<div class="o-flag o-flag--small">
+							<div class="o-flag__img">
+								<img src="images/icons/success.svg" alt="" width="20" height="20" aria-hidden>
+							</div>
+							<div class="o-flag__body">
+								<p>The user "Carolyn Chapman" was successfully added.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="c-alert c-alert--warning">
+					<div class="o-box o-box--small">
+						<div class="o-flag o-flag--small">
+							<div class="o-flag__img">
+								<img src="images/icons/warning.svg" alt="" width="20" height="20" aria-hidden>
+							</div>
+							<div class="o-flag__body">
+								<p>There is a problem with your network connection.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="c-alert c-alert--error">
+					<div class="o-box o-box--small">
+						<div class="o-flag o-flag--small">
+							<div class="o-flag__img">
+								<img src="images/icons/error.svg" alt="" width="20" height="20" aria-hidden>
+							</div>
+							<div class="o-flag__body">
+								<p>A user with the email address "c.chapman@sterlingindustries.com" already exists.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="o-box u-border-bottom">
+				<h2>Dropdown</h2>
+				<div class="u-relative">
+					<button class="c-button c-button--dropdown js-dropdown">Toggle Dropdown</button>
+					<div class="o-container o-container--tiny c-dropdown">
+						<div class="o-box">
+							<p>The children groped their way back to the spring. The weary time dragged on; they slept again, and awoke famished and woe-stricken. <a href="#">Tom believed it must be Tuesday</a> by this time.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="o-box u-border-bottom">
+				<h2>Progress Indicator</h2>
+				<div class="c-progress">
+					<div class="c-progress__track">
+						<div class="c-progress__bar c-progress__bar--striped" style="width: 63%;"></div>
+					</div>
+					<div class="c-progress__description">63% complete</div>
+				</div>
+			</div>
+			<div class="o-box u-border-bottom">
+				<h2>Inputs</h2>
+				<form>
+					<div class="c-field">
+						<label class="c-input">
+							<span class="c-field__label c-field__label--required">First Name</span>
+							<input type="text" class="c-input__input" value="Carolyn" required>
+						</label>
+					</div>
+					<div class="c-field">
+						<label class="c-input">
+							<span class="c-field__label c-field__label--required">Last Name</span>
+							<input type="text" class="c-input__input" value="Chapman" required>
+						</label>
+					</div>
+					<div class="c-field">
+						<label class="c-input">
+							<span class="c-field__label">Nickname</span>
+							<input type="text" class="c-input__input c-input__input--disabled" value="CC" disabled>
+						</label>
+					</div>
+					<div class="c-field">
+						<label class="c-input">
+							<span class="c-field__label c-field__label--required">Email Address</span>
+							<input type="email" class="c-input__input c-input__input--error" required>
+							<span class="c-field__help-text u-text-error">Email address is required.</span>
+						</label>
+					</div>
+					<div class="c-field">
+						<label class="c-textarea">
+							<span class="c-field__label">Bio</span>
+							<textarea class="c-textarea__input"></textarea>
+						</label>
+					</div>
+					<div class="c-field">
+						<label class="c-checkbox">
+							<input type="checkbox" class="c-checkbox__input" checked>
+							<span class="c-checkbox__label">I agree to the Terms of Service.</span>
+						</label>
+					</div>
+					<div class="c-field">
+						<fieldset class="c-choice-list">
+							<legend class="c-field__label">Notifications</legend>
+							<ul class="o-list-bare c-choice-list__choices">
+								<li class="c-choice-list__item">
+									<label class="c-checkbox">
+										<input type="checkbox" class="c-checkbox__input" checked>
+										<span class="c-checkbox__label">Security alerts</span>
+									</label>
+								</li>
+								<li class="c-choice-list__item">
+									<label class="c-checkbox">
+										<input type="checkbox" class="c-checkbox__input">
+										<span class="c-checkbox__label">Product releases</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+					</div>
+					<div class="c-field">
+						<fieldset class="c-choice-list">
+							<legend class="c-field__label">Contact Method</legend>
+							<ul class="o-list-bare o-list-inline c-choice-list__choices">
+								<li class="o-list-inline__item c-choice-list__item">
+									<label class="c-radio">
+										<input name="radio-group" type="radio" class="c-radio__input" checked>
+										<span class="c-radio__label">Email</span>
+									</label>
+								</li>
+								<li class="o-list-inline__item c-choice-list__item">
+									<label class="c-radio">
+										<input name="radio-group" type="radio" class="c-radio__input">
+										<span class="c-radio__label">Phone</span>
+									</label>
+								</li>
+								<li class="o-list-inline__item c-choice-list__item">
+									<label class="c-radio">
+										<input name="radio-group" type="radio" class="c-radio__input">
+										<span class="c-radio__label">None</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+					</div>
+					<div class="c-field">
+						<label class="c-select">
+							<span class="c-field__label">Contact Method</span>
+							<select class="c-select__input">
+								<option></option>
+								<optgroup label="Email">
+									<option>c.chapman@sterlingindustries.com</option>
+									<option>carolyn@gmail.com</option>
+								</optgroup>
+								<optgroup label="Other">
+									<option>Phone</option>
+								</optgroup>
+							</select>
+						</label>
+					</div>
+				</form>
+			</div>
+			<form>
+				<div class="u-border-bottom">
+					<div class="o-box">
+						<h3>Details</h3>
+						<div class="c-field--inline">
+							<div class="c-field">
+								<label class="c-select">
+									<span class="c-field__label">Greeting</span>
+									<select class="c-select__input" required>
+										<option>Mr.</option>
+										<option>Mrs.</option>
+										<option selected>Ms.</option>
+										<option>Dr.</option>
+										<option>Sir</option>
+										<option>Other</option>
+									</select>
+								</label>
+							</div>
+							<div class="c-field">
+								<label class="c-input">
+									<span class="c-field__label c-field__label--required">First Name</span>
+									<input type="text" class="c-input__input" value="Carolyn" required>
+								</label>
+							</div>
+							<div class="c-field">
+								<label class="c-input">
+									<span class="c-field__label c-field__label--required">Last Name</span>
+									<input type="text" class="c-input__input" value="Chapman" required>
+								</label>
+							</div>
+							<div class="c-field">
+								<label class="c-input">
+									<span class="c-field__label c-field__label--required">Email Address</span>
+									<input type="email" class="c-input__input" value="c.chapman@sterlingindustries.com" required>
+								</label>
+							</div>
+							<div class="c-field">
+								<fieldset class="c-choice-list">
+									<legend class="c-field__label">Contact Method</legend>
+									<ul class="o-list-bare c-choice-list__choices">
+										<li class="c-choice-list__item">
+											<label class="c-radio">
+												<input name="contact-method" type="radio" value="email" class="c-radio__input">
+												<span class="c-radio__label">Email</span>
+											</label>
+										</li>
+										<li class="c-choice-list__item">
+											<label class="c-radio">
+												<input name="contact-method" type="radio" class="c-radio__input" value="phone" checked>
+												<span class="c-radio__label">Phone</span>
+											</label>
+										</li>
+									</ul>
+								</fieldset>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="o-box">
+				<h2>Tables</h2>
+			</div>
+			<div class="o-container--responsive">
+				<table>
+					<thead>
+						<tr>
+							<th class="c-table__column--sortable">First Name</th>
+							<th class="c-table__column--sortable">Last Name <img src="images/sort-asc.svg" alt="" width="9" height="5"></th>
+							<th class="c-table__column--sortable">Email Address</th>
+							<th>Contact Method</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Carolyn</td>
+							<td>Chapman</td>
+							<td>c.chapman@sterlingindustries.com</td>
+							<td>Email</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="o-box">
+				<nav class="c-pagination">
+					<ul class="o-list-bare c-pagination__list u-text-center">
+						<li class="c-pagination__item c-pagination__item--previous"><button href="#" class="o-button-bare c-pagination__link">&larr;<span class="u-sr-only"> Previous page</span></button></li>
+						<li class="c-pagination__item is-selected"><button href="#" class="o-button-bare c-pagination__link"><span class="u-sr-only">Page </span>1</button></li>
+						<li class="c-pagination__item"><button href="#" class="o-button-bare c-pagination__link"><span class="u-sr-only">Page </span>2</button></li>
+						<li class="c-pagination__item"><button href="#" class="o-button-bare c-pagination__link"><span class="u-sr-only">Page </span>3</button></li>
+						<li class="c-pagination__item">&#8230;</li>
+						<li class="c-pagination__item"><button href="#" class="o-button-bare c-pagination__link"><span class="u-sr-only">Page </span>7</button></li>
+						<li class="c-pagination__item"><button href="#" class="o-button-bare c-pagination__link"><span class="u-sr-only">Page </span>8</button></li>
+						<li class="c-pagination__item"><button href="#" class="o-button-bare c-pagination__link"><span class="u-sr-only">Page </span>9</button></li>
+						<li class="c-pagination__item c-pagination__item--next"><button href="#" class="o-button-bare c-pagination__link">&rarr;<span class="u-sr-only"> Next page</span></button></li>
+					</ul>
+				</nav>
+			</div>
+		</main>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

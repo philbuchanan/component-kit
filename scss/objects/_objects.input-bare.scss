@@ -1,0 +1,15 @@
+// # Objects: Input Bare
+// -----------------------------------------------------------------------------
+
+// Remove all browser default input styling.
+
+.o-input-bare {
+	font: inherit;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	width: 100%;
+	padding: 0;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+}

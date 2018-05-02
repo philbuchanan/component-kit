@@ -1,0 +1,40 @@
+// # Components: Dropdown
+// -----------------------------------------------------------------------------
+
+// 1. Dropdowns are hidden by default.
+
+.c-dropdown {
+	display: none; // [1]
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin-top: 1px;
+	background-color: #fff;
+	border: 1px solid $color-border--light;
+	border-radius: $border-radius;
+	box-shadow: $dropshadow--light;
+	z-index: $z-index-dropdown;
+	@include animate();
+
+	&.is-open {
+		display: block;
+		@include animation('fadeIn, slideInUp');
+	}
+
+	&.is-closing {
+		display: block;
+		@include animation('fadeOut, slideOutDown');
+	}
+}
+
+
+
+// ## Dropdown Modifiers
+// -----------------------------------------------------------------------------
+
+// Align dropdowns to the right of the button
+
+.c-dropdown--right {
+	left: auto;
+	right: 0;
+}

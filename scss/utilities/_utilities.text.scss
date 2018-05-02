@@ -1,0 +1,73 @@
+// # Utilities: Text
+// -----------------------------------------------------------------------------
+
+// ## Text Alignment
+// -----------------------------------------------------------------------------
+
+.u-text-left {
+	text-align: left !important;
+}
+
+.u-text-right {
+	text-align: right !important;
+}
+
+.u-text-center {
+	text-align: center !important;
+}
+
+
+
+// ## Text Wrapping
+// -----------------------------------------------------------------------------
+
+.u-no-wrap {
+	white-space: nowrap !important;
+}
+
+.u-text-truncate {
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+}
+
+
+
+// ## Text Style
+// -----------------------------------------------------------------------------
+
+.u-text-small {
+	font-size: $font-size-h6 !important;
+}
+
+.u-text-big {
+	font-size: $font-size-h1 !important;
+}
+
+.u-text-no-decoration {
+	text-decoration: none !important;
+}
+
+
+
+// ## Text Colors
+// -----------------------------------------------------------------------------
+
+// 1. NOTE: This does *not* adhere to the minimum contrast ratio of 4.5:1 as set
+//    out in the WCAG 2.0 AA standard. Use sparingly.
+
+.u-text-muted {
+	opacity: 0.5 !important; // [1]
+}
+
+.u-text-error {
+	color: $color-error !important;
+}
+
+.u-text-success {
+	color: $color-success !important;
+}
+
+.u-text-ko {
+	color: #fff !important;
+}

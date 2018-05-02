@@ -1,0 +1,222 @@
+// # Components: Inputs
+// -----------------------------------------------------------------------------
+
+// ## Shared
+// -----------------------------------------------------------------------------
+
+.c-field {
+	@include clearfix();
+	margin-bottom: $global-spacing-unit;
+}
+
+
+
+// ## Labels and Typography
+// -----------------------------------------------------------------------------
+
+.c-field__label {
+	display: block;
+	font-size: $font-size-h4;
+	font-weight: $font-weight-bold;
+	margin-bottom: 2px;
+}
+
+.c-field__label--required {
+	&:after {
+		content: "*";
+		margin-left: 2px;
+	}
+}
+
+.c-field__help-text {
+	display: inline-block;
+	font-size: $font-size-h6;
+	margin-bottom: 0;
+}
+
+
+
+// ## Text inputs
+// -----------------------------------------------------------------------------
+
+.c-input__input,
+.c-textarea__input {
+	font: inherit;
+	border: 1px solid $color-border;
+	border-radius: $border-radius;
+	width: 100%;
+	height: 32px;
+	padding: 0 0.5rem;
+	box-shadow: $dropshadow--inset;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+
+	&:focus {
+		border-color: $color-primary;
+		box-shadow: 0 0 0 1px $color-primary;
+		outline: none;
+	}
+}
+
+.c-input__input {
+	-webkit-appearance: textfield;
+
+	&::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+}
+
+.c-input__input--error {
+	border-color: $color-error;
+
+	&:focus {
+		border-color: $color-error;
+		box-shadow: 0 0 0 1px $color-error;
+	}
+}
+
+.c-input__input--disabled {
+	background-color: $grey-faint;
+}
+
+
+
+// ## Textarea
+// -----------------------------------------------------------------------------
+
+// 1. Allow only vertical resizing of textareas
+
+.c-textarea__input {
+	display: block;
+	min-height: 80px;
+	padding: 0.3rem;
+	resize: vertical; // [1]
+}
+
+
+
+// ## Checkboxes and radio buttons
+// -----------------------------------------------------------------------------
+
+// 1. Left align multiple lines of text on a single checkbox.
+// 2. Add indication of what area of the radio or checkbox is clickable on hover.
+
+.c-radio,
+.c-checkbox {
+	display: inline-block;
+	border-radius: $border-radius;
+	padding: 2px 0 1px 24px;
+	text-indent: -20px; // [1]
+
+	&:hover {
+		background-color: $color-hover-bg; // [2]
+	}
+}
+
+.c-radio__label,
+.c-checkbox__label {
+	padding: 2px;
+}
+
+.c-radio__input,
+.c-checkbox__input {
+	position: relative;
+	top: -1px;
+	margin: 0 2px 0 0;
+
+	&:focus {
+		outline: none;
+
+		+ .c-radio__label,
+		+ .c-checkbox__label {
+			box-shadow: 0 0 0 2px $color-primary;
+		}
+	}
+}
+
+
+
+// ### Choice List
+// -----------------------------------------------------------------------------
+
+.c-choice-list__item {
+	margin-right: 8px;
+}
+
+
+
+// ## Select Input
+// -----------------------------------------------------------------------------
+
+.c-select__input {
+	background-color: transparent;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-image: url("images/select-arrow.svg");
+	background-size: 30px 30px;
+	border: 1px solid $color-border;
+	border-radius: $border-radius;
+	box-shadow: none;
+	font-size: inherit;
+	text-overflow: ellipsis;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 32px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	-webkit-padding-start: 0.5rem;
+	   -moz-padding-start: 0.5rem;
+	-webkit-padding-end: 40px;
+	   -moz-padding-end: 40px;
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	&:focus {
+		border-color: $color-primary;
+		box-shadow: 0 0 0 1px $color-primary;
+		outline: none;
+	}
+}
+
+
+
+// ## Additional
+// -----------------------------------------------------------------------------
+
+.c-field--inline {
+	@include clearfix();
+
+	.c-field {
+		margin-bottom: $global-spacing-unit-small;
+	}
+
+	.c-field__label {
+		position: relative;
+		top: 7px;
+		float: left;
+		width: 120px;
+		padding-right: 10px;
+	}
+
+	.c-choice-list .c-field__label {
+		top: 2px;
+	}
+
+	.c-input__input,
+	.c-select__input {
+		float: left;
+		width: calc(100% - 120px);
+	}
+
+	.c-choice-list__choices,
+	.c-field__help-text {
+		margin-left: 120px;
+	}
+}

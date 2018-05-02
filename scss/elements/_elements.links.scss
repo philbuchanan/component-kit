@@ -1,0 +1,16 @@
+// # Elements: Links
+// -----------------------------------------------------------------------------
+
+a {
+	color: $color-link;
+	text-decoration: underline;
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 2px $color-primary;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}

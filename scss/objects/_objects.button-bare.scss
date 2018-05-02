@@ -1,0 +1,25 @@
+// # Objects: Button Bare
+// -----------------------------------------------------------------------------
+
+// Remove all browser default button styling. Bascially, make the button look
+// like text.
+
+.o-button-bare {
+	display: inline-block;
+	color: inherit;
+	background-color: transparent;
+	font: inherit;
+	text-align: left;
+	text-decoration: none;
+	vertical-align: middle;
+	border: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	transition: 0;
+	box-shadow: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}

@@ -1,0 +1,42 @@
+// # Objects: Layout
+// -----------------------------------------------------------------------------
+
+// The layout object provides us with a column-style layout system. This file
+// contains the basic structural elements, but classes should be complemented
+// with width utilities, for example:
+//
+//   <div class="o-layout">
+//     <div class="o-layout__item u-6of12"></div>
+//     <div class="o-layout__item u-6of12"></div>
+//   </div>
+//
+// The above will create a two-column structure in which each column will
+// fluidly fill half of the width of the parent.
+
+.o-layout {
+	@include clearfix();
+	max-width: $wrapper-width;
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+}
+
+// 1. All layout items are 100% width by default (mobile first).
+
+.o-layout__item {
+	float: left;
+	width: 100%; // [1]
+	padding-left: $gutter;
+	padding-right: $gutter;
+}
+
+
+
+// ## Gutter size modifiers
+// -----------------------------------------------------------------------------
+
+.o-layout--flush {
+	> .o-layout__item {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

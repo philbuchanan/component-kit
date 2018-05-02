@@ -1,0 +1,42 @@
+// # Objects: Box
+// -----------------------------------------------------------------------------
+
+// The box object simply boxes off content. Extend with cosmetic styles in the
+// Components layer.
+
+// 1. So we can apply the `.o-box` class on naturally-inline elements.
+// 2. Remove the margin from the last child of a boxed off area so that we don’t
+//    end up with compounded margin/padding spacings.
+
+.o-box {
+	display: block; // [1]
+	padding: $global-spacing-unit;
+	@include clearfix();
+
+	> :last-child {
+		margin-bottom: 0; // [2]
+	}
+}
+
+
+
+// ## Box Varients
+// -----------------------------------------------------------------------------
+
+.o-box--small {
+	padding: $global-spacing-unit-small;
+}
+
+.o-box--large {
+	padding: $global-spacing-unit-large;
+}
+
+.o-box--flush {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.o-box--flat {
+	padding-top: 0;
+	padding-bottom: 0;
+}

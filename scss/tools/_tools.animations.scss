@@ -1,0 +1,108 @@
+// # Animations: Base Mixins and Keyframes
+// -----------------------------------------------------------------------------
+
+// Only apply animations to `transform` and `opacity` as these are the only
+// properties browsers can animate cheaply.
+
+@mixin animate($dur: $duration, $easing: $animation-easing) {
+	-webkit-animation-duration: #{$dur};
+	   -moz-animation-duration: #{$dur};
+	    -ms-animation-duration: #{$dur};
+	     -o-animation-duration: #{$dur};
+	        animation-duration: #{$dur};
+	-webkit-animation-timing-function: $easing;
+	   -moz-animation-timing-function: $easing;
+	    -ms-animation-timing-function: $easing;
+	     -o-animation-timing-function: $easing;
+	        animation-timing-function: $easing;
+}
+
+@mixin animation($str) {
+	-webkit-animation-name: #{$str};
+	   -moz-animation-name: #{$str};
+	    -ms-animation-name: #{$str};
+	     -o-animation-name: #{$str};
+	        animation-name: #{$str};
+	-webkit-animation-fill-mode: forwards;
+	   -moz-animation-fill-mode: forwards;
+	    -ms-animation-fill-mode: forwards;
+	     -o-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+@mixin animation-count($count: 3) {
+	-webkit-animation-iteration-count: #{$count};
+	   -moz-animation-iteration-count: #{$count};
+	    -ms-animation-iteration-count: #{$count};
+	     -o-animation-iteration-count: #{$count};
+	        animation-iteration-count: #{$count};
+}
+
+
+
+// ## Animations: Fade
+// -----------------------------------------------------------------------------
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+
+
+// ## Animations: Slide
+// -----------------------------------------------------------------------------
+
+@keyframes slideInUp {
+	from {
+		@include translate3d(0, 30%, 0);
+	}
+
+	to {
+		@include transform(none);
+	}
+}
+
+@keyframes slideOutDown {
+	from {
+		@include transform(none);
+	}
+
+	to {
+		@include translate3d(0, 30%, 0);
+	}
+}
+
+
+
+// ## Animations: Pulse
+// -----------------------------------------------------------------------------
+
+@keyframes pulse {
+	from {
+		@include scale3d(1, 1, 1);
+	}
+
+	50% {
+		@include scale3d(1.5, 1.5, 1.5);
+	}
+
+	to {
+		@include scale3d(1, 1, 1);
+	}
+}
