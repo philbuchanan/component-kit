@@ -12,5 +12,4 @@ The folder structure is as follows:
 - `/elements`: Unclassed HTML elements
 - `/objects`: Objects, abstractions, and design-less patterns
 - `/components`: Discrete, complete chunks of UI
-- `/animations`: CSS3 animation classes
 - `/utilities`: High-specificity, very explicit selectors for overrides and helpers (usually include `!important` to ensure override)
