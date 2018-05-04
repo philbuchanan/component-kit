@@ -20,7 +20,7 @@ $color-border:                      $grey;
 $color-border--light:               $grey-light;
 
 $color-error:                       #e00;
-$color-success:                     #080;
+$color-success:                     #39c49f; // Do not use for text
 $color-warning:                     #856404;
 
 $color-hover-bg:                    rgba($color-primary, 0.07);
@@ -112,7 +112,7 @@ $z-index:                             1;
 $overlay:                           rgba(0, 0, 0, 0.5);
 $dropshadow:                        0 1px 5px rgba(0, 0, 0, 0.35);
 $dropshadow--light:                 0 1px 3px rgba(0, 0, 0, 0.15);
-$dropshadow--inset:                 inset 0 1px 2px rgba(0, 0, 0, 0.1);
+$dropshadow--inset:                 inset 0 1px 2px rgba(0, 0, 0, 0.05);
 
 
 

@@ -1,0 +1,48 @@
+// # Components: Switch
+// -----------------------------------------------------------------------------
+
+.c-switch {
+	position: relative;
+	display: inline-block;
+}
+
+.c-switch__input {
+	&:checked {
+		+ .c-switch__slider {
+			background-color: $color-success;
+		}
+
+		+ .c-switch__slider:before {
+			@include translateX(12px);
+		}
+	}
+
+	&:focus + .c-switch__slider {
+		box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px $color-primary;
+	}
+}
+
+.c-switch__slider {
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	cursor: pointer;
+	background-color: $grey;
+	width: 28px;
+	height: 16px;
+	margin-right: 4px;
+	border-radius: 8px;
+	transition: background-color 0.4s;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		background-color: #fff;
+		height: 14px;
+		width: 14px;
+		border-radius: 50%;
+		transition: transform 0.4s;
+	}
+}
