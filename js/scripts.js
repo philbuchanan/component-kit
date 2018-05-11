@@ -102,27 +102,63 @@
 
 
 	/**
-	 * Dropdowns
+	 * Dropdown Class
 	 */
 
-	Array.from(document.querySelectorAll('.js-dropdown')).forEach(button => {
-		button.addEventListener('click', function(event) {
-			event.stopPropagation();
+	var Dropdown = function(btn) {
+		var _self = this;
 
-			var dropdown = this.nextElementSibling;
+		this.options = {
+			trigger: btn,
+			dropdown: btn.nextElementSibling
+		};
+		this.state = {
+			open: false
+		};
 
-			if (dropdown.classList.value.includes('is-open')) {
-				dropdown.classList.remove('is-open');
-				dropdown.classList.add('is-closing');
-
-				setTimeout(function() {
-					dropdown.classList.remove('is-closing');
-				}, duration);
+		this.toggleDropdown = function() {
+			if (_self.state.open) {
+				_self.closeDropdown();
 			}
 			else {
-				dropdown.classList.add('is-open');
+				_self.openDropdown();
+			}
+		};
+
+		this.openDropdown = function() {
+			_self.options.dropdown.classList.add('is-open');
+			_self.state.open = true;
+		};
+
+		this.closeDropdown = function() {
+			_self.options.dropdown.classList.remove('is-open');
+			_self.options.dropdown.classList.add('is-closing');
+
+			setTimeout(function() {
+				_self.options.dropdown.classList.remove('is-closing');
+				_self.state.open = false;
+			}, duration);
+		};
+
+		_self.options.trigger.addEventListener('click', function(event) {
+			event.stopPropagation();
+
+			_self.toggleDropdown();
+		});
+
+		document.addEventListener('keyup', function(event) {
+			// Escape key maps to keycode `27`
+			if (event.keyCode == 27) {
+				if (_self.state.open) {
+					_self.closeDropdown();
+				}
 			}
 		});
+	};
+
+	// Enable all dropdowns
+	Array.from(document.querySelectorAll('.js-dropdown')).forEach(button => {
+		new Dropdown(button);
 	});
 
 }());
