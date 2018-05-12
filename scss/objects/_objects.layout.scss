@@ -15,7 +15,6 @@
 
 .o-layout {
 	@include clearfix();
-	max-width: $wrapper-width;
 	margin-left: -$gutter;
 	margin-right: -$gutter;
 }

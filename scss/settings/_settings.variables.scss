@@ -60,14 +60,13 @@ $font-weight-bold:                  600;
 // -----------------------------------------------------------------------------
 
 $wrapper-width:                     1200px;
-$min-width:                         840px;
 $fractions:                         (12);
 $gutter:                            round($global-spacing-unit * 0.5);
 
 $breakpoints: (
-	small:  475px,
-	medium: 640px,
-	large:  900px,
+	sm: 475px,
+	md: 640px,
+	lg: 900px,
 );
 
 
