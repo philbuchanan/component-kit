@@ -99,7 +99,7 @@
 				<p>Modals should only be used when blocking the user from taking any other action is absolutely necessary.</p>
 				<p>All modals must have a heading (<code>&lt;h2&gt;</code>).</p>
 				<button class="c-button c-button--primary js-open-modal">Open Modal</button>
-				<div class="c-modal js-modal">
+				<div class="c-modal js-modal" data-open-modal="js-open-modal" data-close-modal="js-close-modal">
 					<div class="o-container--md u-center">
 						<div class="c-modal__container">
 							<div class="o-box c-modal__content">
@@ -113,7 +113,7 @@
 					</div>
 				</div>
 				<button class="c-button c-button--primary js-open-2fa-modal">Model with Close Button</button>
-				<div class="c-modal js-2fa-modal">
+				<div class="c-modal js-modal" data-open-modal="js-open-2fa-modal" data-close-modal="js-close-2fa-modal">
 					<div class="o-container--sm u-center">
 						<div class="c-modal__container">
 							<div class="o-box">
@@ -125,7 +125,7 @@
 					</div>
 				</div>
 				<button class="c-button c-button--primary js-open-form-modal">Modal with Form</button>
-				<div class="c-modal js-form-modal">
+				<div class="c-modal js-modal" data-open-modal="js-open-form-modal" data-close-modal="js-close-form-modal">
 					<div class="o-container--md u-center">
 						<div class="c-modal__container">
 							<form action="" method="get">
@@ -172,7 +172,7 @@
 					</div>
 				</div>
 				<button class="c-button c-button--danger js-open-delete-modal">Delete Users</button>
-				<div class="c-modal js-delete-modal">
+				<div class="c-modal js-modal" data-open-modal="js-open-delete-modal" data-close-modal="js-close-delete-modal">
 					<div class="o-container--md u-center">
 						<div class="c-modal__container">
 							<form action="" method="get">
@@ -484,5 +484,22 @@
 			</div>
 		</main>
 		<script src="js/scripts.js"></script>
+		<script>
+			/**
+			 * Delete confirmation
+			 *
+			 * Forces a user to type 'DELETE' in order to continue.
+			 */
+			var deleteButton = document.querySelector('.js-delete-button');
+
+			document.querySelector('.js-delete-input').addEventListener('keyup', function(event) {
+				if (this.value === 'DELETE') {
+					deleteButton.removeAttribute('disabled');
+				}
+				else {
+					deleteButton.setAttribute('disabled', 'disabled');
+				}
+			});
+		</script>
 	</body>
 </html>
