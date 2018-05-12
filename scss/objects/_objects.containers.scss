@@ -1,19 +1,27 @@
 // # Objects: Containers
 // -----------------------------------------------------------------------------
 
-.o-container--tiny {
+.o-container--xxs {
+	width: 170px;
+}
+
+.o-container--xs {
 	width: 250px;
 }
 
-.o-container--small {
-	width: 400px;
+.o-container--sm {
+	width: 350px;
 }
 
-.o-container--medium {
+.o-container--md {
+	max-width: 450px;
+}
+
+.o-container--lg {
 	max-width: 600px;
 }
 
-.o-container--large {
+.o-container--xl {
 	max-width: 900px;
 }
 
@@ -31,7 +39,7 @@
 // ## Container Colors
 // -----------------------------------------------------------------------------
 
-.c-container--grey {
+.o-container--grey {
 	background-color: $grey-faint;
 	border: 1px solid $color-border--light;
 	border-radius: $border-radius;

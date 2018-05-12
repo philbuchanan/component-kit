@@ -36,6 +36,8 @@ h6,
 .c-h6 {
 	font-size: $font-size-h6;
 	font-weight: $font-weight-bold;
+	text-transform: uppercase;
+	letter-spacing: 0.025em;
 }
 
 strong {

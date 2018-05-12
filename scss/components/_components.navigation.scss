@@ -1,0 +1,81 @@
+// # Components: Navigation
+// -----------------------------------------------------------------------------
+
+.c-site-logo {
+	display: inline-block;
+	float: left;
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: $global-spacing-unit;
+}
+
+
+
+// ## Navigation Bars
+// -----------------------------------------------------------------------------
+
+.c-nav-bar {
+	background-color: $color-primary;
+	@include clearfix();
+}
+
+
+
+// ## Primary Navigation
+// -----------------------------------------------------------------------------
+
+// 1. Offset the transparent bottom border so text remains centered.
+// 2. Show as active when a dropdown is open as well.
+
+.c-primary-nav-link {
+	color: #fff;
+	font-size: $global-font-size;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	max-width: 175px;
+	height: 48px;
+	padding-top: 3px; // [1]
+	margin-left: $global-spacing-unit-small;
+	margin-right: $global-spacing-unit-small;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: border $duration-fast;
+
+	&:hover,
+	&.is-open, // [2]
+	&.is-selected {
+		border-bottom-color: $color-secondary;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 2px #fff;
+	}
+}
+
+// 1. Align icons vertically with text menu items.
+
+.c-primary-nav-link__icon {
+	position: relative; // [1]
+	top: -2px; // [1]
+}
+
+
+
+// ## Link List
+// -----------------------------------------------------------------------------
+
+.c-link-list {
+	display: block;
+	position: relative;
+	text-decoration: none;
+	padding: 6px $global-spacing-unit-small;
+
+	&:hover {
+		background-color: $color-hover-bg;
+	}
+}
+
+.c-link-list--separated {
+	border-top: 1px solid $color-border--light;
+}

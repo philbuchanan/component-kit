@@ -126,11 +126,13 @@
 		};
 
 		this.openDropdown = function() {
+			_self.options.trigger.classList.add('is-open');
 			_self.options.dropdown.classList.add('is-open');
 			_self.state.open = true;
 		};
 
 		this.closeDropdown = function() {
+			_self.options.trigger.classList.remove('is-open');
 			_self.options.dropdown.classList.remove('is-open');
 			_self.options.dropdown.classList.add('is-closing');
 

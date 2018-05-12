@@ -32,7 +32,9 @@
 	height: 16px;
 	margin-right: 4px;
 	border-radius: 8px;
+	box-shadow: $dropshadow--inset;
 	transition: background-color 0.4s;
+	overflow: hidden;
 
 	&:before {
 		content: "";
@@ -43,6 +45,7 @@
 		height: 14px;
 		width: 14px;
 		border-radius: 50%;
+		box-shadow: $dropshadow--light;
 		transition: transform 0.4s;
 	}
 }

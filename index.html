@@ -9,6 +9,54 @@
 	<body>
 		<a class="u-sr-only u-skip-link" href="#content">Skip to content</a>
 		<main id="content">
+			<header>
+				<nav class="c-nav-bar">
+					<img src="images/logos/reflectivity-logo.svg" alt="Reflectivity logo" width="22" height="32" class="c-site-logo">
+					<ul class="o-list-bare o-list-inline u-pull-left">
+						<li class="o-list-inline__item">
+							<a class="c-primary-nav-link" href="#">Elements</a>
+						</li>
+						<li class="o-list-inline__item">
+							<a class="c-primary-nav-link" href="#">Objects</a>
+						</li>
+						<li class="o-list-inline__item">
+							<a class="c-primary-nav-link is-selected" href="#">Components</a>
+						</li>
+						<li class="o-list-inline__item">
+							<a class="c-primary-nav-link" href="#">Utilities</a>
+						</li>
+					</ul>
+					<ul class="o-list-bare o-list-inline u-pull-right">
+						<li class="o-list-inline__item u-relative">
+							<button class="o-button-bare c-primary-nav-link js-dropdown" href="#">
+								<img src="images/icons/bell-ko.svg" width="16" height="16" alt="" class="c-primary-nav-link__icon">
+								<span class="u-sr-only">No unread notifications</span>
+							</button>
+							<div class="o-container o-container--xs c-dropdown c-dropdown--right">
+								<div class="o-box">
+									<h2 class="c-h6">Notifications</h2>
+									<p>You're up to date! 🎉</p>
+								</div>
+							</div>
+						</li>
+						<li class="o-list-inline__item">
+							<a class="c-primary-nav-link" href="#">Help</a>
+						</li>
+						<li class="o-list-inline__item u-relative">
+							<button class="o-button-bare c-button--dropdown c-primary-nav-link js-dropdown">
+								<span class="u-text-truncate">Carolyn Chapman</span>
+							</button>
+							<div class="o-container o-container--xxs c-dropdown c-dropdown--right">
+								<ul class="o-list-bare">
+									<li><a href="#" class="c-link-list">Profile</a></li>
+									<li><a href="#" class="c-link-list">Security</a></li>
+									<li><a href="#" class="c-link-list c-link-list--separated">Sign Out</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
 			<div class="o-box u-border-bottom">
 				<h1>Component Kit</h1>
 				<p>A modular, scalable, Sass-based, OOCSS framework for quick development of web application interfaces.</p>
@@ -24,7 +72,7 @@
 				<p class="u-text-small">Meta content</p>
 				<h3>Code</h3>
 				<p>Primary buttons should have a class of <code>c-button--primary</code> added.</p>
-				<pre class="c-container--grey"><div class="o-box o-box--small"><code>.c-button--primary {
+				<pre class="o-container--grey"><div class="o-box o-box--small"><code>.c-button--primary {
   background-color: $color-primary;
 }</code></div></pre>
 			</div>
@@ -52,7 +100,7 @@
 				<p>All modals must have a heading (<code>&lt;h2&gt;</code>).</p>
 				<button class="c-button c-button--primary js-open-modal">Open Modal</button>
 				<div class="c-modal js-modal">
-					<div class="o-container--medium u-center">
+					<div class="o-container--md u-center">
 						<div class="c-modal__container">
 							<div class="o-box c-modal__content">
 								<div class="o-island">
@@ -66,7 +114,7 @@
 				</div>
 				<button class="c-button c-button--primary js-open-2fa-modal">Model with Close Button</button>
 				<div class="c-modal js-2fa-modal">
-					<div class="o-container--small u-center">
+					<div class="o-container--sm u-center">
 						<div class="c-modal__container">
 							<div class="o-box">
 								<h2>Your Two-Factor Secret Key</h2>
@@ -78,7 +126,7 @@
 				</div>
 				<button class="c-button c-button--primary js-open-form-modal">Modal with Form</button>
 				<div class="c-modal js-form-modal">
-					<div class="o-container--medium u-center">
+					<div class="o-container--md u-center">
 						<div class="c-modal__container">
 							<form action="" method="get">
 								<div class="o-box">
@@ -125,7 +173,7 @@
 				</div>
 				<button class="c-button c-button--danger js-open-delete-modal">Delete Users</button>
 				<div class="c-modal js-delete-modal">
-					<div class="o-container--medium u-center">
+					<div class="o-container--md u-center">
 						<div class="c-modal__container">
 							<form action="" method="get">
 								<div class="o-box">
@@ -192,7 +240,7 @@
 				<h2>Dropdown</h2>
 				<div class="u-relative">
 					<button class="c-button c-button--dropdown js-dropdown">Toggle Dropdown</button>
-					<div class="o-container o-container--tiny c-dropdown">
+					<div class="o-container o-container--xs c-dropdown">
 						<div class="o-box">
 							<p>The children groped their way back to the spring. The weary time dragged on; they slept again, and awoke famished and woe-stricken. <a href="#">Tom believed it must be Tuesday</a> by this time.</p>
 						</div>
