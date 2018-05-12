@@ -85,10 +85,14 @@ $sides: (
 	bottom,
 );
 
-$sizes: (
-	small:  $global-spacing-unit-small,
-	medium: $global-spacing-unit,
-	large:  $global-spacing-unit-large,
+$containers: (
+	xxs: 170px,
+	xs:  250px,
+	sm:  350px,
+	md:  450px,
+	lg:  600px,
+	xl:  800px,
+	xxl: $wrapper-width,
 );
 
 $border-radius:                     3px;
