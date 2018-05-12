@@ -10,10 +10,10 @@ $grey-light:                        #e5e5e5; // 90%
 $grey:                              #bfbfbf; // 75%
 $grey-dark:                         #4d4d4d; // 30%
 
-$color-primary:                     #7342ab;
-$color-secondary:                   #00ffff;
+$color-primary:                     #7342ab !default;
+$color-secondary:                   #00ffff !default;
 
-$color-text:                        #000;
+$color-text:                        #000 !default;
 
 $color-link:                        $color-primary;
 
@@ -31,13 +31,13 @@ $color-hover-bg:                    rgba($color-primary, 0.07);
 // ## Typography
 // -----------------------------------------------------------------------------
 
-$font-family-sans-serif:            -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif:            -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-mono:                  "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
 
-$global-font-size:                  13px;
-$global-line-height:                1.5;
+$global-font-size:                  13px !default;
+$global-line-height:                1.5 !default;
 
-$global-spacing-unit:               24px;
+$global-spacing-unit:               24px !default;
 $global-spacing-unit-tiny:          round($global-spacing-unit * 0.25);
 $global-spacing-unit-small:         round($global-spacing-unit * 0.5);
 $global-spacing-unit-large:         round($global-spacing-unit * 1.5);
