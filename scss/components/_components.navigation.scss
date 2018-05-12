@@ -1,7 +1,12 @@
 // # Components: Navigation
 // -----------------------------------------------------------------------------
 
-.c-site-logo {
+.c-nav-bar {
+	background-color: $color-primary;
+	@include clearfix();
+}
+
+.c-nav-bar__logo {
 	display: inline-block;
 	float: left;
 	margin-top: 8px;
@@ -9,53 +14,58 @@
 	margin-right: $global-spacing-unit;
 }
 
-
-
-// ## Navigation Bars
-// -----------------------------------------------------------------------------
-
-.c-nav-bar {
-	background-color: $color-primary;
-	@include clearfix();
-}
-
-
-
-// ## Primary Navigation
-// -----------------------------------------------------------------------------
-
 // 1. Offset the transparent bottom border so text remains centered.
 // 2. Show as active when a dropdown is open as well.
+// 3. Needs to be `:before` because dropdown buttons use `:after` to add the
+//    caret and we don't want to override that.
 
-.c-primary-nav-link {
+.c-nav-bar__link {
 	color: #fff;
 	font-size: $global-font-size;
 	text-decoration: none;
-	border-bottom: 3px solid transparent;
 	max-width: 175px;
 	height: 48px;
-	padding-top: 3px; // [1]
-	margin-left: $global-spacing-unit-small;
-	margin-right: $global-spacing-unit-small;
+	padding-left: $global-spacing-unit-small;
+	padding-right: $global-spacing-unit-small;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition: border $duration-fast;
 
 	&:hover,
-	&.is-open, // [2]
-	&.is-selected {
-		border-bottom-color: $color-secondary;
+	&:focus {
+		color: $color-primary;
+		background-color: $color-secondary;
 	}
 
-	&:focus {
-		box-shadow: 0 0 0 2px #fff;
+	&.is-open, // [2]
+	&.is-selected {
+		position: relative;
+
+		&:before { // [3]
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: $color-secondary;
+			content: "";
+			width: 100%;
+			height: 3px;
+		}
 	}
 }
 
-// 1. Align icons vertically with text menu items.
+// 1. Icon width + padding left and right of link
 
-.c-primary-nav-link__icon {
-	position: relative; // [1]
-	top: -2px; // [1]
+.c-nav-bar__link--notifications {
+	background-image: url("images/icons/bell-ko.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 16px 16px;
+	width: 40px; // [1]
+
+	&.is-selected,
+	&:hover,
+	&:focus {
+		background-image: url("images/icons/bell.svg");
+	}
 }

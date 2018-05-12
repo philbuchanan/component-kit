@@ -147,7 +147,7 @@ html {
 h1,
 .c-h1 {
   font-size: 1.85rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h2,
@@ -1094,14 +1094,6 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 0 0 4px;
 }
 
-.c-site-logo {
-  display: inline-block;
-  float: left;
-  margin-top: 8px;
-  margin-left: 8px;
-  margin-right: 24px;
-}
-
 .c-nav-bar {
   background-color: #7342ab;
 }
@@ -1112,34 +1104,60 @@ input[type="search"]::-webkit-search-results-decoration {
   clear: both !important;
 }
 
-.c-primary-nav-link {
+.c-nav-bar__logo {
+  display: inline-block;
+  float: left;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 24px;
+}
+
+.c-nav-bar__link {
   color: #fff;
   font-size: 13px;
   text-decoration: none;
-  border-bottom: 3px solid transparent;
   max-width: 175px;
   height: 48px;
-  padding-top: 3px;
-  margin-left: 12px;
-  margin-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: border 0.1s;
 }
 
-.c-primary-nav-link:hover,
-.c-primary-nav-link.is-open, .c-primary-nav-link.is-selected {
-  border-bottom-color: #00ffff;
+.c-nav-bar__link:hover,
+.c-nav-bar__link:focus {
+  color: #7342ab;
+  background-color: #00ffff;
 }
 
-.c-primary-nav-link:focus {
-  box-shadow: 0 0 0 2px #fff;
-}
-
-.c-primary-nav-link__icon {
+.c-nav-bar__link.is-open, .c-nav-bar__link.is-selected {
   position: relative;
-  top: -2px;
+}
+
+.c-nav-bar__link.is-open:before, .c-nav-bar__link.is-selected:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #00ffff;
+  content: "";
+  width: 100%;
+  height: 3px;
+}
+
+.c-nav-bar__link--notifications {
+  background-image: url("images/icons/bell-ko.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+  width: 40px;
+}
+
+.c-nav-bar__link--notifications.is-selected,
+.c-nav-bar__link--notifications:hover,
+.c-nav-bar__link--notifications:focus {
+  background-image: url("images/icons/bell.svg");
 }
 
 .c-pagination__item {
