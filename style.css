@@ -972,6 +972,21 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-left: 120px;
 }
 
+.c-list-link {
+  display: block;
+  text-decoration: none;
+  padding: 6px 12px;
+}
+
+.c-list-link:hover {
+  background-color: rgba(115, 66, 171, 0.07);
+  text-decoration: none;
+}
+
+.c-list-link--separated {
+  border-top: 1px solid #e5e5e5;
+}
+
 .c-modal {
   display: none;
   position: fixed;
@@ -1125,21 +1140,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .c-primary-nav-link__icon {
   position: relative;
   top: -2px;
-}
-
-.c-link-list {
-  display: block;
-  position: relative;
-  text-decoration: none;
-  padding: 6px 12px;
-}
-
-.c-link-list:hover {
-  background-color: rgba(115, 66, 171, 0.07);
-}
-
-.c-link-list--separated {
-  border-top: 1px solid #e5e5e5;
 }
 
 .c-pagination__item {

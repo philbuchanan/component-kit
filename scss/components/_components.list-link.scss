@@ -1,0 +1,21 @@
+// # Components: List Links
+// -----------------------------------------------------------------------------
+
+// Use with o-list-bare class.
+
+// 1. Defensively reomve any link text decoration.
+
+.c-list-link {
+	display: block;
+	text-decoration: none;
+	padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+
+	&:hover {
+		background-color: $color-hover-bg;
+		text-decoration: none; // [1]
+	}
+}
+
+.c-list-link--separated {
+	border-top: 1px solid $color-border--light;
+}
