@@ -1,37 +1,13 @@
 // # Objects: Containers
 // -----------------------------------------------------------------------------
 
-.o-container--xxs {
-	width: 170px;
-}
+// Add classes for each of the $containers in `variables.scss`
+// e.g. .o-container--xs, .o-container--lg
 
-.o-container--xs {
-	width: 250px;
-}
-
-.o-container--sm {
-	width: 350px;
-}
-
-.o-container--md {
-	max-width: 450px;
-}
-
-.o-container--lg {
-	max-width: 600px;
-}
-
-.o-container--xl {
-	max-width: 900px;
-}
-
-// Responsive conainer
-
-.c-container--responsive {
-	max-width: 100%;
-	overflow-x: auto;
-	white-space: nowrap;
-	-webkit-overflow-scrolling: touch;
+@each $name, $size in $containers {
+	.o-container--#{$name} {
+		width: #{$size};
+	}
 }
 
 
@@ -65,4 +41,14 @@
 
 .o-scrollable--small {
 	max-height: 265px;
+}
+
+// Responsive container
+// Allows a container to scroll horizontal. Useful for tables of data.
+
+.o-container--responsive {
+	max-width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
 }
