@@ -1326,6 +1326,136 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #f2f2f2;
 }
 
+.c-tooltip {
+  display: none;
+  position: absolute;
+  color: #fff;
+  background-color: #4d4d4d;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 250px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  z-index: 600;
+  -webkit-animation-duration: 0.1s;
+  -moz-animation-duration: 0.1s;
+  -ms-animation-duration: 0.1s;
+  -o-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
+  -moz-animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
+  -ms-animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
+  -o-animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
+  animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
+}
+
+.c-tooltip:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+.c-tooltip.is-open {
+  display: inline-block;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.c-tooltip.is-closing {
+  display: inline-block;
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.c-tooltip--top,
+.c-tooltip--bottom {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c-tooltip--top:after,
+.c-tooltip--bottom:after {
+  left: 50%;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: -5px;
+}
+
+.c-tooltip--top {
+  bottom: calc(100% + 7px);
+}
+
+.c-tooltip--top:after {
+  bottom: -5px;
+  border-top: 5px solid #4d4d4d;
+}
+
+.c-tooltip--bottom {
+  top: calc(100% + 7px);
+}
+
+.c-tooltip--bottom:after {
+  top: -5px;
+  border-bottom: 5px solid #4d4d4d;
+}
+
+.c-tooltip--left,
+.c-tooltip--right {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c-tooltip--left:after,
+.c-tooltip--right:after {
+  top: 50%;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  margin-top: -5px;
+}
+
+.c-tooltip--left {
+  right: calc(100% + 7px);
+}
+
+.c-tooltip--left:after {
+  right: -5px;
+  border-left: 5px solid #4d4d4d;
+}
+
+.c-tooltip--right {
+  left: calc(100% + 7px);
+}
+
+.c-tooltip--right:after {
+  left: -5px;
+  border-right: 5px solid #4d4d4d;
+}
+
 .u-sr-only {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
@@ -1366,6 +1496,10 @@ input[type="search"]::-webkit-search-results-decoration {
   content: "" !important;
   display: block !important;
   clear: both !important;
+}
+
+.u-inline-block {
+  display: inline-block !important;
 }
 
 .u-relative {

@@ -6,6 +6,86 @@
 
 
 	/**
+	 * Tooltips Class
+	 */
+	var Tooltip = function(tooltip) {
+		var _self = this;
+
+		var baseClass = 'c-tooltip';
+
+		this.components = {
+			trigger: tooltip.nextElementSibling,
+			tooltip: tooltip
+		};
+
+		this.state = {
+			open: false
+		};
+
+		var options = {};
+
+		Object.assign(options, tooltip.dataset);
+
+		switch (options.position) {
+			case 'top':
+				_self.components.tooltip.classList.add(baseClass + '--top');
+				break;
+			case 'left':
+				_self.components.tooltip.classList.add(baseClass + '--left');
+				break;
+			case 'right':
+				_self.components.tooltip.classList.add(baseClass + '--right');
+				break;
+			default:
+				_self.components.tooltip.classList.add(baseClass + '--bottom');
+				break;
+		}
+
+		this.toggleTooltip = function() {
+			if (_self.state.open) {
+				_self.closeTooltip();
+			}
+			else {
+				_self.openTooltip();
+			}
+		};
+
+		this.openTooltip = function() {
+			_self.components.tooltip.classList.add('is-open');
+			_self.state.open = true;
+		};
+
+		this.closeTooltip = function() {
+			_self.components.tooltip.classList.remove('is-open');
+			_self.components.tooltip.classList.add('is-closing');
+
+			setTimeout(function() {
+				_self.components.tooltip.classList.remove('is-closing');
+				_self.state.open = false;
+			}, duration);
+		};
+
+		_self.components.trigger.addEventListener('mouseover', function(event) {
+			event.stopPropagation();
+
+			_self.openTooltip();
+		});
+
+		_self.components.trigger.addEventListener('mouseout', function(event) {
+			event.stopPropagation();
+
+			_self.closeTooltip();
+		});
+	};
+
+	// Enable all tooltips
+	Array.from(document.querySelectorAll('.js-tooltip')).forEach(tooltip => {
+		new Tooltip(tooltip);
+	});
+
+
+
+	/**
 	 * Modal Class
 	 */
 
@@ -59,7 +139,7 @@
 		});
 	};
 
-	// Enable all dropdowns
+	// Enable all modals
 	Array.from(document.querySelectorAll('.js-modal')).forEach(modal => {
 		new Modal(modal);
 	});
