@@ -1,0 +1,100 @@
+// # Components: Tooltips
+// -----------------------------------------------------------------------------
+
+.c-tooltip {
+	display: none;
+	position: absolute;
+	color: #fff;
+	background-color: $grey-dark;
+	text-align: center;
+	font-size: $font-size-h5;
+	width: 250px;
+	padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+	border-radius: $border-radius;
+	z-index: $z-index-tooltip;
+	@include animate($duration-fast);
+
+	&:after {
+		position: absolute;
+		content: "";
+		width: 0;
+		height: 0;
+	}
+
+	&.is-open {
+		display: inline-block;
+		@include animation("fadeIn");
+	}
+
+	&.is-closing {
+		display: inline-block;
+		@include animation("fadeOut");
+	}
+}
+
+
+
+// ## Tooltip Positions
+// -----------------------------------------------------------------------------
+
+.c-tooltip--top,
+.c-tooltip--bottom {
+	left: 50%;
+	@include translateX(-50%);
+
+	&:after {
+		left: 50%;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		margin-left: -5px;
+	}
+}
+
+.c-tooltip--top {
+	bottom: calc(100% + 7px);
+
+	&:after {
+		bottom: -5px;
+		border-top: 5px solid $grey-dark;
+	}
+}
+
+.c-tooltip--bottom {
+	top: calc(100% + 7px);
+
+	&:after {
+		top: -5px;
+		border-bottom: 5px solid $grey-dark;
+	}
+}
+
+.c-tooltip--left,
+.c-tooltip--right {
+	top: 50%;
+	@include translateY(-50%);
+
+	&:after {
+		top: 50%;
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+		margin-top: -5px;
+	}
+}
+
+.c-tooltip--left {
+	right: calc(100% + 7px);
+
+	&:after {
+		right: -5px;
+		border-left: 5px solid $grey-dark;
+	}
+}
+
+.c-tooltip--right {
+	left: calc(100% + 7px);
+
+	&:after {
+		left: -5px;
+		border-right: 5px solid $grey-dark;
+	}
+}
