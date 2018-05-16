@@ -609,11 +609,7 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 100%;
   background-color: #f2f2f2;
   border-radius: 3px;
-  margin-bottom: 24px;
-}
-
-.c-alert + .c-alert {
-  margin-top: -20px;
+  margin-bottom: 6px;
 }
 
 .c-alert--success {
