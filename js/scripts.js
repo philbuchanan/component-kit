@@ -49,7 +49,8 @@
 						enabled: true,
 						offset: this.options.offset
 					}
-				}
+				},
+				eventsEnabled: false
 			});
 		};
 
@@ -192,13 +193,28 @@
 	var Dropdown = function(btn) {
 		var _self = this;
 
-		this.components = {
-			trigger:  btn,
-			dropdown: btn.nextElementSibling
-		};
+		this.trigger  = btn;
+		this.dropdown = btn.nextElementSibling;
+		this.popper   = null;
+		this.position = 'bottom-start';
 
 		this.state = {
 			open: false
+		};
+
+		this.createDropdown = function() {
+			var options = {};
+
+			Object.assign(options, this.dropdown.dataset);
+
+			if (this.isValidPosition(options.position)) {
+				this.position = options.position;
+			}
+
+			this.popper = new Popper(this.trigger, this.dropdown, {
+				placement: this.position,
+				eventsEnabled: false
+			});
 		};
 
 		this.toggleDropdown = function() {
@@ -211,23 +227,42 @@
 		};
 
 		this.openDropdown = function() {
-			_self.components.trigger.classList.add('is-open');
-			_self.components.dropdown.classList.add('is-open');
-			_self.state.open = true;
+			this.trigger.classList.add('is-open');
+			this.dropdown.classList.add('is-open');
+			this.state.open = true;
+
+			this.popper.scheduleUpdate();
 		};
 
 		this.closeDropdown = function() {
-			_self.components.trigger.classList.remove('is-open');
-			_self.components.dropdown.classList.remove('is-open');
-			_self.components.dropdown.classList.add('is-closing');
-
-			setTimeout(function() {
-				_self.components.dropdown.classList.remove('is-closing');
-				_self.state.open = false;
-			}, duration);
+			this.trigger.classList.remove('is-open');
+			this.dropdown.classList.remove('is-open');
+			this.state.open = false;
 		};
 
-		_self.components.trigger.addEventListener('click', function(event) {
+
+
+		/**
+		 * Validate the dropdown position
+		 */
+		this.isValidPosition = function(position) {
+			var validPositions = [
+				'top-start',
+				'top-end',
+				'bottom-start',
+				'bottom-end',
+			];
+
+			if (validPositions.indexOf(position) > -1) {
+				return true;
+			}
+
+			return false;
+		};
+
+		this.createDropdown();
+
+		this.trigger.addEventListener('click', function(event) {
 			event.stopPropagation();
 
 			_self.toggleDropdown();
