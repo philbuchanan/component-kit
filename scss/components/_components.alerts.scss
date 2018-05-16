@@ -6,11 +6,7 @@
 	width: 100%;
 	background-color: $grey-faint;
 	border-radius: $border-radius;
-	margin-bottom: $global-spacing-unit;
-
-	+ .c-alert {
-		margin-top: -($global-spacing-unit - 4);
-	}
+	margin-bottom: $global-spacing-unit-tiny;
 }
 
 .c-alert--success {
