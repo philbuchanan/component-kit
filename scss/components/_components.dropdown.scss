@@ -9,9 +9,8 @@
 	top: 100%;
 	left: 0;
 	background-color: #fff;
-	border: 1px solid $color-border--light;
 	border-radius: $border-radius;
-	box-shadow: $dropshadow--light;
+	box-shadow: $dropshadow;
 	z-index: $z-index-dropdown;
 	@include animate();
 
