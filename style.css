@@ -362,9 +362,11 @@ input[type="search"]::-webkit-search-results-decoration {
   font: inherit;
   text-align: left;
   text-decoration: none;
-  vertical-align: middle;
+  vertical-align: baseline;
   border: none;
   border-radius: 0;
+  height: auto;
+  width: auto;
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -373,6 +375,10 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.o-button-bare:hover {
+  background-color: transparent;
 }
 
 .o-container--xxs {
@@ -627,15 +633,15 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #000;
   background-color: #f2f2f2;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: baseline;
   font: inherit;
-  font-size: 1rem;
+  font-size: 13px;
   font-weight: 400;
   text-decoration: none;
   border: none;
   border-radius: 3px;
   margin: 0;
-  padding: 8px 16px;
+  padding: 5px 10px;
   cursor: pointer;
   transition: background-color 0.1s;
   box-shadow: 0 1px 0 #d8d8d8;
@@ -652,10 +658,6 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
   top: 1px;
   box-shadow: none;
-}
-
-.c-button + .c-button {
-  margin-left: 6px;
 }
 
 .c-button--primary {
@@ -689,7 +691,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .c-button--danger.c-button--link {
   color: #e00;
-  background-color: transparent;
 }
 
 .c-button--danger.c-button--link:hover {
@@ -697,20 +698,35 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .c-button--link {
-  color: #7342ab;
+  display: inline-block;
+  color: inherit;
   background-color: transparent;
-  font-size: inherit;
-  font-weight: 400;
-  text-decoration: underline;
-  height: auto;
-  padding: 0;
-  box-shadow: none;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: baseline;
+  border: none;
   border-radius: 0;
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #7342ab;
+  text-decoration: underline;
+}
+
+.c-button--link:hover {
+  background-color: transparent;
 }
 
 .c-button--link:hover {
   color: #7342ab;
-  background-color: transparent;
   text-decoration: none;
 }
 
@@ -729,6 +745,10 @@ input[type="search"]::-webkit-search-results-decoration {
   border-right: 5px solid transparent;
   border-top: 5px solid currentColor;
   margin-left: 5px;
+}
+
+.c-button-bar .c-button:not(:last-child) {
+  margin-right: 6px;
 }
 
 .c-dropdown {

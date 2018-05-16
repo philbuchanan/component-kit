@@ -6,15 +6,15 @@
 	color: $color-text;
 	background-color: $grey-faint;
 	text-align: center;
-	vertical-align: middle;
+	vertical-align: baseline;
 	font: inherit;
-	font-size: $font-size-h4;
+	font-size: $global-font-size;
 	font-weight: $font-weight-normal;
 	text-decoration: none;
 	border: none;
 	border-radius: $border-radius;
 	margin: 0;
-	padding: 8px 16px;
+	padding: 5px 10px;
 	cursor: pointer;
 	transition: background-color $duration-fast;
 	box-shadow: 0 1px 0 darken($grey-faint, 10%);
@@ -30,10 +30,6 @@
 		position: relative;
 		top: 1px;
 		box-shadow: none;
-	}
-
-	+ .c-button {
-		margin-left: 6px;
 	}
 }
 
@@ -72,7 +68,6 @@
 
 	&.c-button--link {
 		color: $color-error;
-		background-color: transparent;
 
 		&:hover {
 			color: darken($color-error, 7%);
@@ -81,19 +76,12 @@
 }
 
 .c-button--link {
+	@include button-bare();
 	color: $color-link;
-	background-color: transparent;
-	font-size: inherit;
-	font-weight: $font-weight-normal;
 	text-decoration: underline;
-	height: auto;
-	padding: 0;
-	box-shadow: none;
-	border-radius: 0;
 
 	&:hover {
 		color: $color-link;
-		background-color: transparent;
 		text-decoration: none;
 	}
 }
@@ -119,5 +107,20 @@
 		border-right: 5px solid transparent;
 		border-top: 5px solid currentColor;
 		margin-left: 5px;
+	}
+}
+
+
+
+// ## Button Bars
+// -----------------------------------------------------------------------------
+
+// Group buttons together and space them accordingly
+
+.c-button-bar {
+	.c-button {
+		&:not(:last-child) {
+			margin-right: 6px;
+		}
 	}
 }
