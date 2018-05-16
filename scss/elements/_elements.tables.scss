@@ -7,21 +7,21 @@ table {
 	width: 100%; // [1]
 }
 
-th,
-td {
-	text-align: left;
-	vertical-align: top;
+thead {
+	border-bottom: 2px solid $color-border--light;
+
+	th {
+		vertical-align: bottom;
+	}
 }
 
 th,
 td {
 	text-align: left;
 	vertical-align: top;
-	padding: $global-spacing-unit-small $global-spacing-unit;
+	padding: $global-spacing-unit-small;
 }
 
 th {
-	color: #fff;
-	background-color: $color-primary;
 	font-weight: $font-weight-bold;
 }
