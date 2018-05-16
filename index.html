@@ -77,18 +77,22 @@
 			</div>
 			<div class="o-box">
 				<h2>Buttons</h2>
-				<button class="c-button c-button--primary">Primary Button</button>
-				<button class="c-button">Regular Button</button>
-				<button class="c-button c-button--danger">Danger Button</button>
-				<button class="c-button c-button--link">Link Button</button>
-				<input type="reset" value="Reset" class="c-button c-button--link c-button--danger">
+				<div class="c-button-bar">
+					<button class="c-button c-button--primary">Primary Button</button>
+					<button class="c-button">Regular Button</button>
+					<button class="c-button c-button--danger">Danger Button</button>
+					<button class="c-button c-button--link">Link Button</button>
+					<input type="reset" value="Reset" class="c-button c-button--link c-button--danger">
+				</div>
 			</div>
 			<div class="o-box">
-				<button class="c-button c-button--primary" disabled>Disabled Primary Button</button>
-				<button class="c-button" disabled>Disabled Regular Button</button>
-				<button class="c-button c-button--danger" disabled>Disabled Danger Button</button>
-				<button class="c-button c-button--link" disabled>Disabled Link Button</button>
-				<input type="reset" value="Reset" class="c-button c-button--link c-button--danger" disabled>
+				<div class="c-button-bar">
+					<button class="c-button c-button--primary" disabled>Disabled Primary Button</button>
+					<button class="c-button" disabled>Disabled Regular Button</button>
+					<button class="c-button c-button--danger" disabled>Disabled Danger Button</button>
+					<button class="c-button c-button--link" disabled>Disabled Link Button</button>
+					<input type="reset" value="Reset" class="c-button c-button--link c-button--danger" disabled>
+				</div>
 			</div>
 			<div class="o-box u-border-bottom">
 				<button class="c-button c-button--primary c-button--full-width">Full Width Button</button>
@@ -97,96 +101,107 @@
 				<h2>Modals</h2>
 				<p>Modals should only be used when blocking the user from taking any other action is absolutely necessary.</p>
 				<p>All modals must have a heading (<code>&lt;h2&gt;</code>).</p>
-				<button class="c-button c-button--primary js-open-modal">Open Modal</button>
-				<div class="c-modal js-modal" data-open-modal="js-open-modal" data-close-modal="js-close-modal">
-					<div class="o-container--md u-center">
-						<div class="c-modal__container">
-							<div class="o-box c-modal__content">
-								<div class="o-island">
-									<h2>Revert Recovery Key?</h2>
-									<p>Cancelling now will discard the new recovery key you just generated and your account will revert to your old recovery key.</p>
+				<div class="c-button-bar">
+					<button class="c-button c-button--primary js-open-modal">Open Modal</button>
+					<div class="c-modal js-modal" data-open-modal="js-open-modal" data-close-modal="js-close-modal">
+						<div class="o-container--md u-center">
+							<div class="c-modal__container">
+								<div class="o-box c-modal__content">
+									<div class="o-island">
+										<h2>Revert Recovery Key?</h2>
+										<p>Cancelling now will discard the new recovery key you just generated and your account will revert to your old recovery key.</p>
+									</div>
+									<div class="c-button-bar">
+										<button class="c-button c-button--primary js-close-modal">Revert to Old Recovery Key</button>
+										<button type="reset" class="c-button js-close-modal">Keep New Recovery Key</button>
+									</div>
 								</div>
-								<button class="c-button c-button--primary js-close-modal">Revert to Old Recovery Key</button> <button type="reset" class="c-button js-close-modal">Keep New Recovery Key</button>
 							</div>
 						</div>
 					</div>
-				</div>
-				<button class="c-button c-button--primary js-open-2fa-modal">Model with Close Button</button>
-				<div class="c-modal js-modal" data-open-modal="js-open-2fa-modal" data-close-modal="js-close-2fa-modal">
-					<div class="o-container--sm u-center">
-						<div class="c-modal__container">
-							<div class="o-box">
-								<h2>Your Two-Factor Secret Key</h2>
-								<p class="u-text-big"><code>sedw gyiu kptt oqvu</code></p>
+					<button class="c-button c-button--primary js-open-2fa-modal">Model with Close Button</button>
+					<div class="c-modal js-modal" data-open-modal="js-open-2fa-modal" data-close-modal="js-close-2fa-modal">
+						<div class="o-container--sm u-center">
+							<div class="c-modal__container">
+								<div class="o-box">
+									<h2>Your Two-Factor Secret Key</h2>
+									<p class="u-text-big"><code>sedw gyiu kptt oqvu</code></p>
+								</div>
+								<button class="o-button-bare c-modal__close-button js-close-2fa-modal" aria-label="Close"><img src="images/icons/close.svg" alt="" width="11" height="11"></button>
 							</div>
-							<button class="o-button-bare c-modal__close-button js-close-2fa-modal" aria-label="Close"><img src="images/icons/close.svg" alt="" width="11" height="11"></button>
 						</div>
 					</div>
-				</div>
-				<button class="c-button c-button--primary js-open-form-modal">Modal with Form</button>
-				<div class="c-modal js-modal" data-open-modal="js-open-form-modal" data-close-modal="js-close-form-modal">
-					<div class="o-container--md u-center">
-						<div class="c-modal__container">
-							<form action="" method="get">
-								<div class="o-box">
-									<h2>Sorry to see you go!</h2>
-									<p>We'd love to know why you decided to downgrade.</p>
-									<div class="c-field">
-										<fieldset class="c-choice-list">
-											<legend class="c-field__label">Please select up to 3 items</legend>
-											<ul class="o-list-bare c-choice-list__choices">
-												<li class="c-choice-list__item">
-													<label class="c-checkbox">
-														<input type="checkbox" class="c-checkbox__input">
-														<span class="c-checkbox__label">Lacking features</span>
-													</label>
-												</li>
-												<li class="c-choice-list__item">
-													<label class="c-checkbox">
-														<input type="checkbox" class="c-checkbox__input">
-														<span class="c-checkbox__label">Confusing interface</span>
-													</label>
-												</li>
-												<li class="c-choice-list__item">
-													<label class="c-checkbox">
-														<input type="checkbox" class="c-checkbox__input">
-														<span class="c-checkbox__label">Account made in error</span>
-													</label>
-												</li>
-											</ul>
-										</fieldset>
+					<button class="c-button c-button--primary js-open-form-modal">Modal with Form</button>
+					<div class="c-modal js-modal" data-open-modal="js-open-form-modal" data-close-modal="js-close-form-modal">
+						<div class="o-container--md u-center">
+							<div class="c-modal__container">
+								<form action="" method="get">
+									<div class="o-box">
+										<h2>Sorry to see you go!</h2>
+										<p>We'd love to know why you decided to downgrade.</p>
+										<div class="c-field">
+											<fieldset class="c-choice-list">
+												<legend class="c-field__label">Please select up to 3 items</legend>
+												<ul class="o-list-bare c-choice-list__choices">
+													<li class="c-choice-list__item">
+														<label class="c-checkbox">
+															<input type="checkbox" class="c-checkbox__input">
+															<span class="c-checkbox__label">Lacking features</span>
+														</label>
+													</li>
+													<li class="c-choice-list__item">
+														<label class="c-checkbox">
+															<input type="checkbox" class="c-checkbox__input">
+															<span class="c-checkbox__label">Confusing interface</span>
+														</label>
+													</li>
+													<li class="c-choice-list__item">
+														<label class="c-checkbox">
+															<input type="checkbox" class="c-checkbox__input">
+															<span class="c-checkbox__label">Account made in error</span>
+														</label>
+													</li>
+												</ul>
+											</fieldset>
+										</div>
+										<div class="c-field">
+											<label class="c-textarea">
+												<span class="c-field__label">Tell us more, if you'd like</span>
+												<textarea class="c-textarea__input"></textarea>
+												<span class="c-field__help-text">Maximum 300 characters</span>
+											</label>
+										</div>
+										<div class="c-button-bar">
+											<button class="c-button c-button--primary js-close-form-modal">Submit Feedback</button>
+											<button type="reset" class="c-button c-button--link js-close-form-modal">No thanks</button>
+										</div>
 									</div>
-									<div class="c-field">
-										<label class="c-textarea">
-											<span class="c-field__label">Tell us more, if you'd like</span>
-											<textarea class="c-textarea__input"></textarea>
-											<span class="c-field__help-text">Maximum 300 characters</span>
-										</label>
-									</div>
-									<button class="c-button c-button--primary js-close-form-modal">Submit Feedback</button> <button type="reset" class="c-button c-button--link js-close-form-modal">No thanks</button>
-								</div>
-							</form>
-							<button class="o-button-bare c-modal__close-button js-close-form-modal" aria-label="Close"><img src="images/icons/close.svg" alt="" width="11" height="11"></button>
+								</form>
+								<button class="o-button-bare c-modal__close-button js-close-form-modal" aria-label="Close"><img src="images/icons/close.svg" alt="" width="11" height="11"></button>
+							</div>
 						</div>
 					</div>
-				</div>
-				<button class="c-button c-button--danger js-open-delete-modal">Delete Users</button>
-				<div class="c-modal js-modal" data-open-modal="js-open-delete-modal" data-close-modal="js-close-delete-modal">
-					<div class="o-container--md u-center">
-						<div class="c-modal__container">
-							<form action="" method="get">
-								<div class="o-box">
-									<h2>Delete 2 Users?</h2>
-									<p>Deleting users will permanently delete all data associated with them.</p>
-									<div class="c-field">
-										<label class="c-input">
-											<span class="c-field__label c-field__label--required">Type <code>DELETE</code> to confirm</span>
-											<input type="text" class="c-input__input js-delete-input" required>
-										</label>
+					<button class="c-button c-button--danger js-open-delete-modal">Delete Users</button>
+					<div class="c-modal js-modal" data-open-modal="js-open-delete-modal" data-close-modal="js-close-delete-modal">
+						<div class="o-container--md u-center">
+							<div class="c-modal__container">
+								<form action="" method="get">
+									<div class="o-box">
+										<h2>Delete 2 Users?</h2>
+										<p>Deleting users will permanently delete all data associated with them.</p>
+										<div class="c-field">
+											<label class="c-input">
+												<span class="c-field__label c-field__label--required">Type <code>DELETE</code> to confirm</span>
+												<input type="text" class="c-input__input js-delete-input" required>
+											</label>
+										</div>
+										<div class="c-button-bar">
+											<button class="c-button c-button--danger js-close-delete-modal js-delete-button" disabled="">Delete 2 Users</button>
+											<button type="reset" class="c-button c-button--link js-close-delete-modal">Cancel</button>
+										</div>
 									</div>
-									<button class="c-button c-button--danger js-close-delete-modal js-delete-button" disabled="">Delete 2 Users</button> <button type="reset" class="c-button c-button--link js-close-delete-modal">Cancel</button>
-								</div>
-							</form>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -257,9 +272,10 @@
 			</div>
 			<div class="o-box u-border-bottom">
 				<h2>Tooltip</h2>
-				<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring." data-tooltip-position="top-start">Hover to Reveal Top</button>
-				<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring.">Hover to Reveal Bottom</button>
-				<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring."  data-tooltip-position="right">Hover to Reveal Right</button>
+				<div class="c-button-bar">
+					<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring." data-tooltip-position="top-start">Hover to Reveal Top</button>
+					<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring.">Hover to Reveal Bottom</button>
+					<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring."  data-tooltip-position="right">Hover to Reveal Right</button>
 				</div>
 			</div>
 			<div class="o-box u-border-bottom">

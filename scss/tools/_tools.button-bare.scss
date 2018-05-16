@@ -1,0 +1,30 @@
+// # Tools: Button Bare
+// -----------------------------------------------------------------------------
+
+// Mixin to remove all default browser styling from a button.
+
+@mixin button-bare() {
+	display: inline-block;
+	color: inherit;
+	background-color: transparent;
+	font: inherit;
+	text-align: left;
+	text-decoration: none;
+	vertical-align: baseline;
+	border: none;
+	border-radius: 0;
+	height: auto;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	transition: 0;
+	box-shadow: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+
+	&:hover {
+		background-color: transparent;
+	}
+}
