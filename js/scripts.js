@@ -8,74 +8,113 @@
 	/**
 	 * Tooltips Class
 	 */
-	var Tooltip = function(tooltip) {
+	var Tooltip = function(reference) {
 		var _self = this;
 
-		var baseClass = 'c-tooltip';
+		this.reference = reference;
+		this.tooltip   = document.createElement('div');
+		this.popper    = null;
 
-		this.components = {
-			trigger: tooltip.nextElementSibling,
-			tooltip: tooltip
+		this.options = {
+			baseClass: 'c-tooltip',
+			position:  'bottom',
+			offset:    '0, 7'
 		};
 
 		this.state = {
 			open: false
 		};
 
-		var options = {};
+		Object.assign(this.options, reference.dataset);
 
-		Object.assign(options, tooltip.dataset);
-
-		switch (options.position) {
-			case 'top':
-				_self.components.tooltip.classList.add(baseClass + '--top');
-				break;
-			case 'left':
-				_self.components.tooltip.classList.add(baseClass + '--left');
-				break;
-			case 'right':
-				_self.components.tooltip.classList.add(baseClass + '--right');
-				break;
-			default:
-				_self.components.tooltip.classList.add(baseClass + '--bottom');
-				break;
-		}
-
-		this.toggleTooltip = function() {
-			if (_self.state.open) {
-				_self.closeTooltip();
+		this.createTooltip = function() {
+			if (this.isValidPosition(this.options.tooltipPosition)) {
+				this.options.position = this.options.tooltipPosition;
 			}
-			else {
-				_self.openTooltip();
-			}
+
+			this.tooltip.id = 'tooltip-' + Math.random().toString(36).substring(6);
+			this.tooltip.classList.add(this.options.baseClass);
+			this.tooltip.setAttribute('aria-hidden', 'true');
+			this.tooltip.innerHTML = this.options.tooltip.trim();
+
+			document.getElementsByTagName('body')[0].appendChild(this.tooltip);
+
+			// Add `aria-describedby` to our reference element for accessibility reasons
+			this.reference.setAttribute('aria-describedby', this.tooltip.id);
+
+			this.popper = new Popper(this.reference, this.tooltip, {
+				placement: this.options.position,
+				modifiers: {
+					offset: {
+						enabled: true,
+						offset: this.options.offset
+					}
+				}
+			});
 		};
 
 		this.openTooltip = function() {
-			_self.components.tooltip.classList.add('is-open');
-			_self.state.open = true;
+			this.createTooltip();
+
+			this.tooltip.classList.add('is-open');
+			this.tooltip.setAttribute('aria-hidden', 'false');
+			this.state.open = true;
+
+			this.popper.scheduleUpdate();
 		};
 
 		this.closeTooltip = function() {
-			_self.components.tooltip.classList.remove('is-open');
-			_self.components.tooltip.classList.add('is-closing');
+			this.tooltip.classList.remove('is-open');
+			this.tooltip.classList.add('is-closing');
 
 			setTimeout(function() {
-				_self.components.tooltip.classList.remove('is-closing');
+				if (_self.tooltip.parentNode !== null) {
+					_self.tooltip.classList.remove('is-closing');
+					_self.tooltip.setAttribute('aria-hidden', 'true');
+					_self.tooltip.parentNode.removeChild(_self.tooltip);
+				}
+
 				_self.state.open = false;
+				_self.reference.removeAttribute('aria-describedby');
+
+				if (_self.popper !== null) {
+					_self.popper.destroy();
+				}
 			}, duration);
 		};
 
-		_self.components.trigger.addEventListener('mouseover', function(event) {
-			event.stopPropagation();
 
-			_self.openTooltip();
-		});
 
-		_self.components.trigger.addEventListener('mouseout', function(event) {
-			event.stopPropagation();
+		/**
+		 * Validate the tooltip position
+		 */
+		this.isValidPosition = function(position) {
+			var validPositions = [
+				'top',
+				'top-start',
+				'top-end',
+				'bottom',
+				'bottom-start',
+				'bottom-end',
+				'left',
+				'left-start',
+				'left-end',
+				'right',
+				'right-start',
+				'right-end',
+			];
 
-			_self.closeTooltip();
-		});
+			if (validPositions.indexOf(position) > -1) {
+				return true;
+			}
+
+			return false;
+		};
+
+		this.reference.addEventListener('mouseover', this.openTooltip.bind(_self));
+		this.reference.addEventListener('mouseout', this.closeTooltip.bind(_self));
+		this.reference.addEventListener('focus', this.openTooltip.bind(_self));
+		this.reference.addEventListener('blur', this.closeTooltip.bind(_self));
 	};
 
 	// Enable all tooltips

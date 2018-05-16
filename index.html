@@ -257,29 +257,9 @@
 			</div>
 			<div class="o-box u-border-bottom">
 				<h2>Tooltip</h2>
-				<div class="u-relative u-inline-block">
-					<div class="c-tooltip js-tooltip" data-position="top">
-						The children groped their way back to the spring.
-					</div>
-					<button class="c-button">Hover to Reveal Top</button>
-				</div>
-				<div class="u-relative u-inline-block">
-					<div class="c-tooltip js-tooltip" data-position="right">
-						The children groped their way back to the spring.
-					</div>
-					<button class="c-button">Hover to Reveal Right</button>
-				</div>
-				<div class="u-relative u-inline-block">
-					<div class="c-tooltip js-tooltip" data-position="bottom">
-						The children groped their way back to the spring.
-					</div>
-					<button class="c-button">Hover to Reveal Bottom</button>
-				</div>
-				<div class="u-relative u-inline-block">
-					<div class="c-tooltip js-tooltip" data-position="left">
-						The children groped their way back to the spring.
-					</div>
-					<button class="c-button">Hover to Reveal Left</button>
+				<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring." data-tooltip-position="top-start">Hover to Reveal Top</button>
+				<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring.">Hover to Reveal Bottom</button>
+				<button class="c-button js-tooltip" data-tooltip="The children groped their way back to the spring."  data-tooltip-position="right">Hover to Reveal Right</button>
 				</div>
 			</div>
 			<div class="o-box u-border-bottom">
@@ -509,6 +489,7 @@
 				</nav>
 			</div>
 		</main>
+		<script src="js/popper.js"></script>
 		<script src="js/scripts.js"></script>
 		<script>
 			/**
