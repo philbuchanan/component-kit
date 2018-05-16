@@ -1,15 +1,44 @@
 // # Components: Tables
 // -----------------------------------------------------------------------------
 
-.c-table__column--sortable {
-	&:hover {
-		cursor: pointer;
-		background-color: darken($color-primary, 7%);
+// Ensure the table respects the widths set for each column.
+
+.c-table--fixed {
+	table-layout: fixed;
+}
+
+// Add zebra-striping on table rows within the <tbody>.
+// Not recommened to use this at the same time at `.c-table--hover`.
+
+.c-table--striped {
+	tbody tr:nth-child(even) {
+		background-color: #fafafa;
 	}
 }
 
-.c-table--alternate-rows {
-	tr:nth-child(even) {
-		background-color: $grey-faint;
+// Enable a hover state on table rows within the <tbody>.
+// Not recommened to use this at the same time at `.c-table--striped`.
+
+.c-table--hover {
+	tbody tr:hover {
+		background-color: #fafafa;
+	}
+}
+
+// Compress a table.
+
+.c-table--compact {
+	th,
+	td {
+		padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+	}
+}
+
+// Make a table column header sortable.
+
+.c-table__column--sortable {
+	&:hover {
+		cursor: pointer;
+		background-color: $color-hover-bg;
 	}
 }
