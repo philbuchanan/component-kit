@@ -3,7 +3,6 @@
 
 .c-tooltip {
 	display: none;
-	position: absolute;
 	color: #fff;
 	background-color: $grey-dark;
 	text-align: center;
@@ -37,64 +36,100 @@
 // ## Tooltip Positions
 // -----------------------------------------------------------------------------
 
-.c-tooltip--top,
-.c-tooltip--bottom {
-	left: 50%;
-	@include translateX(-50%);
+// Top and Bottom
 
+[x-placement="top"],
+[x-placement="top-start"],
+[x-placement="top-end"],
+[x-placement="bottom"],
+[x-placement="bottom-start"],
+[x-placement="bottom-end"] {
 	&:after {
 		left: 50%;
+		margin-left: -5px;
 		border-left: 5px solid transparent;
 		border-right: 5px solid transparent;
-		margin-left: -5px;
 	}
 }
 
-.c-tooltip--top {
-	bottom: calc(100% + 7px);
-
+[x-placement="top"],
+[x-placement="top-start"],
+[x-placement="top-end"] {
 	&:after {
 		bottom: -5px;
 		border-top: 5px solid $grey-dark;
 	}
 }
 
-.c-tooltip--bottom {
-	top: calc(100% + 7px);
-
+[x-placement="bottom"],
+[x-placement="bottom-start"],
+[x-placement="bottom-end"] {
 	&:after {
 		top: -5px;
 		border-bottom: 5px solid $grey-dark;
 	}
 }
 
-.c-tooltip--left,
-.c-tooltip--right {
-	top: 50%;
-	@include translateY(-50%);
-
+[x-placement="top-start"],
+[x-placement="bottom-start"] {
 	&:after {
-		top: 50%;
-		border-top: 5px solid transparent;
-		border-bottom: 5px solid transparent;
-		margin-top: -5px;
+		left: 10px;
 	}
 }
 
-.c-tooltip--left {
-	right: calc(100% + 7px);
+[x-placement="top-end"],
+[x-placement="bottom-end"] {
+	&:after {
+		left: auto;
+		right: 5px;
+	}
+}
 
+// Left and Right
+
+[x-placement="left"],
+[x-placement="left-start"],
+[x-placement="left-end"],
+[x-placement="right"],
+[x-placement="right-start"],
+[x-placement="right-end"] {
+	&:after {
+		top: 50%;
+		margin-top: -5px;
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+	}
+}
+
+[x-placement="left"],
+[x-placement="left-start"],
+[x-placement="left-end"] {
 	&:after {
 		right: -5px;
 		border-left: 5px solid $grey-dark;
 	}
 }
 
-.c-tooltip--right {
-	left: calc(100% + 7px);
-
+[x-placement="right"],
+[x-placement="right-start"],
+[x-placement="right-end"] {
 	&:after {
 		left: -5px;
 		border-right: 5px solid $grey-dark;
+	}
+}
+
+[x-placement="left-start"],
+[x-placement="right-start"] {
+	&:after {
+		top: 10px;
+	}
+}
+
+[x-placement="left-end"],
+[x-placement="right-end"] {
+	&:after {
+		top: auto;
+		bottom: 5px;
 	}
 }
