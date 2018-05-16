@@ -753,9 +753,8 @@ input[type="search"]::-webkit-search-results-decoration {
   top: 100%;
   left: 0;
   background-color: #fff;
-  border: 1px solid #e5e5e5;
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   z-index: 500;
   -webkit-animation-duration: 0.2s;
   -moz-animation-duration: 0.2s;
@@ -1074,7 +1073,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #fff;
   border-radius: 3px;
   margin: 10vh auto;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   -webkit-animation-duration: 0.2s;
   -moz-animation-duration: 0.2s;
   -ms-animation-duration: 0.2s;
