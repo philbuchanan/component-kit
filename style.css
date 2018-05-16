@@ -749,56 +749,14 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .c-dropdown {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   z-index: 500;
-  -webkit-animation-duration: 0.2s;
-  -moz-animation-duration: 0.2s;
-  -ms-animation-duration: 0.2s;
-  -o-animation-duration: 0.2s;
-  animation-duration: 0.2s;
-  -webkit-animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
-  -moz-animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
-  -ms-animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
-  -o-animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
-  animation-timing-function: cubic-bezier(0.66, 0, 0.33, 1);
 }
 
 .c-dropdown.is-open {
   display: block;
-  -webkit-animation-name: fadeIn, slideInUp;
-  -moz-animation-name: fadeIn, slideInUp;
-  -ms-animation-name: fadeIn, slideInUp;
-  -o-animation-name: fadeIn, slideInUp;
-  animation-name: fadeIn, slideInUp;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.c-dropdown.is-closing {
-  display: block;
-  -webkit-animation-name: fadeOut, slideOutDown;
-  -moz-animation-name: fadeOut, slideOutDown;
-  -ms-animation-name: fadeOut, slideOutDown;
-  -o-animation-name: fadeOut, slideOutDown;
-  animation-name: fadeOut, slideOutDown;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.c-dropdown--right {
-  left: auto;
-  right: 0;
 }
 
 .c-field {
@@ -1054,7 +1012,7 @@ input[type="search"]::-webkit-search-results-decoration {
   animation-fill-mode: forwards;
 }
 
-.c-modal.is-closing .c-modal__content {
+.c-modal.is-closing .c-modal__container {
   -webkit-animation-name: slideOutDown;
   -moz-animation-name: slideOutDown;
   -ms-animation-name: slideOutDown;

@@ -5,34 +5,12 @@
 
 .c-dropdown {
 	display: none; // [1]
-	position: absolute;
-	top: 100%;
-	left: 0;
 	background-color: #fff;
 	border-radius: $border-radius;
 	box-shadow: $dropshadow;
 	z-index: $z-index-dropdown;
-	@include animate();
 
 	&.is-open {
 		display: block;
-		@include animation("fadeIn, slideInUp");
 	}
-
-	&.is-closing {
-		display: block;
-		@include animation("fadeOut, slideOutDown");
-	}
-}
-
-
-
-// ## Dropdown Modifiers
-// -----------------------------------------------------------------------------
-
-// Align dropdowns to the right of the button
-
-.c-dropdown--right {
-	left: auto;
-	right: 0;
 }
