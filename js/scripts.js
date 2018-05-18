@@ -119,7 +119,7 @@
 	};
 
 	// Enable all tooltips
-	Array.from(document.querySelectorAll('.js-tooltip')).forEach(tooltip => {
+	Array.from(document.querySelectorAll('[data-tooltip]')).forEach(tooltip => {
 		new Tooltip(tooltip);
 	});
 
@@ -193,8 +193,8 @@
 	var Dropdown = function(btn) {
 		var _self = this;
 
-		this.trigger  = btn;
-		this.dropdown = btn.nextElementSibling;
+		this.trigger  = btn.previousElementSibling;
+		this.dropdown = btn;
 		this.popper   = null;
 		this.position = 'bottom-start';
 
@@ -203,18 +203,13 @@
 		};
 
 		this.createDropdown = function() {
-			var options = {};
+			var id = 'dropdown-' + Math.random().toString(36).substring(6);
 
-			Object.assign(options, this.dropdown.dataset);
+			this.trigger.id = id;
+			this.trigger.setAttribute('aria-haspopup', true);
+			this.trigger.setAttribute('aria-expanded', false);
 
-			if (this.isValidPosition(options.position)) {
-				this.position = options.position;
-			}
-
-			this.popper = new Popper(this.trigger, this.dropdown, {
-				placement: this.position,
-				eventsEnabled: false
-			});
+			this.dropdown.setAttribute('aria-labelledby', id);
 		};
 
 		this.toggleDropdown = function() {
@@ -227,17 +222,34 @@
 		};
 
 		this.openDropdown = function() {
+			var options = {};
+
+			Object.assign(options, this.dropdown.dataset);
+
+			if (this.isValidPosition(options.position)) {
+				this.position = options.position;
+			}
+
+			this.popper = new Popper(this.trigger, this.dropdown, {
+				placement: this.position
+			});
+
 			this.trigger.classList.add('is-open');
+			this.trigger.setAttribute('aria-expanded', true);
 			this.dropdown.classList.add('is-open');
 			this.state.open = true;
-
-			this.popper.scheduleUpdate();
 		};
 
 		this.closeDropdown = function() {
 			this.trigger.classList.remove('is-open');
+			this.trigger.setAttribute('aria-expanded', false);
 			this.dropdown.classList.remove('is-open');
 			this.state.open = false;
+
+			if (this.popper !== null) {
+				this.popper.destroy();
+				this.popper = null;
+			}
 		};
 
 
@@ -268,6 +280,14 @@
 			_self.toggleDropdown();
 		});
 
+		this.dropdown.addEventListener('click', function(event) {
+			event.stopPropagation();
+		});
+
+		document.addEventListener('click', function(event) {
+			_self.closeDropdown();
+		});
+
 		document.addEventListener('keyup', function(event) {
 			// Escape key maps to keycode `27`
 			if (event.keyCode == 27) {
@@ -279,7 +299,7 @@
 	};
 
 	// Enable all dropdowns
-	Array.from(document.querySelectorAll('.js-dropdown')).forEach(button => {
+	Array.from(document.querySelectorAll('.c-dropdown')).forEach(button => {
 		new Dropdown(button);
 	});
 
