@@ -935,6 +935,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .c-field--inline .c-input__input,
+.c-field--inline .c-textarea__input,
 .c-field--inline .c-select__input {
   float: left;
   width: calc(100% - 120px);
