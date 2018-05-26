@@ -656,6 +656,13 @@ input[type="search"]::-webkit-search-results-decoration {
   box-shadow: none;
 }
 
+.c-button.is-loading {
+  background-image: url("images/icons/loading.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 31px;
+}
+
 .c-button--primary {
   color: #fff;
   background-color: #7342ab;
@@ -693,6 +700,11 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #ca0000;
 }
 
+.c-button--primary.is-loading,
+.c-button--danger.is-loading {
+  background-image: url("images/icons/loading-ko.svg");
+}
+
 .c-button--link {
   display: inline-block;
   color: inherit;
@@ -724,6 +736,11 @@ input[type="search"]::-webkit-search-results-decoration {
 .c-button--link:hover {
   color: #7342ab;
   text-decoration: none;
+}
+
+.c-button--link.is-loading {
+  background-position-x: 0;
+  padding-left: 21px;
 }
 
 .c-button--full-width {
