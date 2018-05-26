@@ -16,6 +16,15 @@
 	}
 }
 
+// Add borders to the bottom of each row in <tbody>.
+// Not recommened to use this at the same time at `.c-table--striped`.
+
+.c-table--ruled {
+	tbody tr {
+		border-bottom: 1px solid $color-border--light;
+	}
+}
+
 // Enable a hover state on table rows within the <tbody>.
 // Not recommened to use this at the same time at `.c-table--striped`.
 
