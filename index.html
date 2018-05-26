@@ -147,38 +147,34 @@
 									<div class="o-box">
 										<h2>Sorry to see you go!</h2>
 										<p>We'd love to know why you decided to downgrade.</p>
-										<div class="c-field">
-											<fieldset class="c-choice-list">
-												<legend class="c-field__label">Please select up to 3 items</legend>
-												<ul class="o-list-bare c-choice-list__choices">
-													<li class="c-choice-list__item">
-														<label class="c-checkbox">
-															<input type="checkbox" class="c-checkbox__input">
-															<span class="c-checkbox__label">Lacking features</span>
-														</label>
-													</li>
-													<li class="c-choice-list__item">
-														<label class="c-checkbox">
-															<input type="checkbox" class="c-checkbox__input">
-															<span class="c-checkbox__label">Confusing interface</span>
-														</label>
-													</li>
-													<li class="c-choice-list__item">
-														<label class="c-checkbox">
-															<input type="checkbox" class="c-checkbox__input">
-															<span class="c-checkbox__label">Account made in error</span>
-														</label>
-													</li>
-												</ul>
-											</fieldset>
-										</div>
-										<div class="c-field">
-											<label class="c-textarea">
-												<span class="c-field__label">Tell us more, if you'd like</span>
-												<textarea class="c-textarea__input"></textarea>
-												<span class="c-field__help-text">Maximum 300 characters</span>
-											</label>
-										</div>
+										<fieldset class="c-field">
+											<legend class="c-field__label">Please select up to 3 items</legend>
+											<ul class="o-list-bare c-choices">
+												<li class="c-choices__item">
+													<label>
+														<input type="checkbox">
+														<span class="c-checkbox__label">Lacking features</span>
+													</label>
+												</li>
+												<li class="c-choices__item">
+													<label>
+														<input type="checkbox">
+														<span class="c-checkbox__label">Confusing interface</span>
+													</label>
+												</li>
+												<li class="c-choices__item">
+													<label>
+														<input type="checkbox">
+														<span class="c-checkbox__label">Account made in error</span>
+													</label>
+												</li>
+											</ul>
+										</fieldset>
+										<label class="c-field">
+											<span class="c-field__label">Tell us more, if you'd like</span>
+											<textarea></textarea>
+											<span class="c-field__help-text">Maximum 300 characters</span>
+										</label>
 										<div class="c-button-bar">
 											<button class="c-button c-button--primary js-close-form-modal">Submit Feedback</button>
 											<button type="reset" class="c-button c-button--link js-close-form-modal">No thanks</button>
@@ -199,7 +195,7 @@
 										<p>Deleting users will permanently delete all data associated with them.</p>
 										<div class="c-field">
 											<label class="c-input">
-												<span class="c-field__label c-field__label--required">Type <code>DELETE</code> to confirm</span>
+												<span class="c-field__label is-required">Type <code>DELETE</code> to confirm</span>
 												<input type="text" class="c-input__input js-delete-input" required>
 											</label>
 										</div>
@@ -287,188 +283,179 @@
 			<div class="o-box u-border-bottom">
 				<h2>Inputs</h2>
 				<form>
-					<div class="c-field">
-						<label class="c-input">
-							<span class="c-field__label c-field__label--required">First Name</span>
-							<input type="text" class="c-input__input" value="Carolyn" required>
-						</label>
-					</div>
-					<div class="c-field">
-						<label class="c-input">
-							<span class="c-field__label c-field__label--required">Last Name</span>
-							<input type="text" class="c-input__input" value="Chapman" required>
-						</label>
-					</div>
-					<div class="c-field">
-						<label class="c-input">
-							<span class="c-field__label">Nickname</span>
-							<input type="text" class="c-input__input c-input__input--disabled" value="CC" disabled>
-						</label>
-					</div>
-					<div class="c-field">
-						<label class="c-input">
-							<span class="c-field__label c-field__label--required">Email Address</span>
-							<input type="email" class="c-input__input c-input__input--error" required>
-							<span class="c-field__help-text u-text-error">Email address is required.</span>
-						</label>
-					</div>
-					<div class="c-field">
-						<label class="c-textarea">
-							<span class="c-field__label">Bio</span>
-							<textarea class="c-textarea__input"></textarea>
-						</label>
-					</div>
-					<div class="c-field">
-						<label class="c-checkbox">
-							<input type="checkbox" class="c-checkbox__input" checked>
-							<span class="c-checkbox__label">I agree to the Terms of Service.</span>
-						</label>
-					</div>
-					<div class="c-field">
-						<fieldset class="c-choice-list">
-							<legend class="c-field__label">Notifications</legend>
-							<ul class="o-list-bare c-choice-list__choices">
-								<li class="c-choice-list__item">
-									<label class="c-checkbox">
-										<input type="checkbox" class="c-checkbox__input" checked>
-										<span class="c-checkbox__label">Security alerts</span>
-									</label>
-								</li>
-								<li class="c-choice-list__item">
-									<label class="c-checkbox">
-										<input type="checkbox" class="c-checkbox__input">
-										<span class="c-checkbox__label">Product releases</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
-					</div>
-					<div class="c-field">
-						<fieldset class="c-choice-list">
-							<legend class="c-field__label">Contact Method</legend>
-							<ul class="o-list-bare o-list-inline c-choice-list__choices">
-								<li class="o-list-inline__item c-choice-list__item">
-									<label class="c-radio">
-										<input name="radio-group" type="radio" class="c-radio__input" checked>
-										<span class="c-radio__label">Email</span>
-									</label>
-								</li>
-								<li class="o-list-inline__item c-choice-list__item">
-									<label class="c-radio">
-										<input name="radio-group" type="radio" class="c-radio__input">
-										<span class="c-radio__label">Phone</span>
-									</label>
-								</li>
-								<li class="o-list-inline__item c-choice-list__item">
-									<label class="c-radio">
-										<input name="radio-group" type="radio" class="c-radio__input">
-										<span class="c-radio__label">None</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
-					</div>
-					<div class="c-field">
-						<label class="c-switch">
-							<input type="checkbox" class="c-switch__input u-sr-only">
-							<span class="c-switch__slider"></span>
-							<span class="c-switch__label">Two-factor authentication</span>
-						</label>
-					</div>
-					<div class="c-field">
-						<fieldset class="c-choice-list">
-							<legend class="c-field__label">Notifications</legend>
-							<ul class="o-list-bare c-choice-list__choices">
-								<li class="c-choice-list__item">
-									<label class="c-switch">
-										<input type="checkbox" class="c-switch__input u-sr-only" checked>
-										<span class="c-switch__slider"></span>
-										<span class="c-switch__label">Security alerts</span>
-									</label>
-								</li>
-								<li class="c-choice-list__item">
-									<label class="c-switch">
-										<input type="checkbox" class="c-switch__input u-sr-only">
-										<span class="c-switch__slider"></span>
-										<span class="c-switch__label">Product releases</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
-					</div>
-					<div class="c-field">
-						<label class="c-select">
-							<span class="c-field__label">Contact Method</span>
-							<select class="c-select__input">
-								<option></option>
-								<optgroup label="Email">
-									<option>c.chapman@sterlingindustries.com</option>
-									<option>carolyn@gmail.com</option>
-								</optgroup>
-								<optgroup label="Other">
-									<option>Phone</option>
-								</optgroup>
-							</select>
-						</label>
-					</div>
+					<label class="c-field">
+						<span class="c-field__label is-required">Text Input</span>
+						<input type="text" value="Carolyn" required>
+					</label>
+					<label class="c-field">
+						<span class="c-field__label is-required">Password</span>
+						<input type="password" value="password123" required>
+					</label>
+					<label class="c-field">
+						<span class="c-field__label">Search</span>
+						<input type="search" value="password123">
+					</label>
+					<label class="c-field">
+						<span class="c-field__label is-required">Email Address</span>
+						<input type="email" class="c-input-error" required>
+						<span class="c-field__help-text u-text-error">The email address is required.</span>
+					</label>
+					<label class="c-field">
+						<span class="c-field__label">Phone Number</span>
+						<input type="tel" value="1-416-555-9832">
+					</label>
+					<label class="c-field">
+						<span class="c-field__label">URL</span>
+						<input type="url" value="https://reflectivity.io">
+					</label>
+					<label class="c-field">
+						<span class="c-field__label">Number</span>
+						<input type="number" value="17">
+					</label>
+					<label class="c-field">
+						<span class="c-field__label">Range</span>
+						<input type="range">
+					</label>
+					<label class="c-field">
+						<span class="c-field__label">Disabled</span>
+						<input type="text" value="Chapman" disabled>
+					</label>
+					<label class="c-field">
+						<span class="c-field__label">Textarea</span>
+						<textarea>The children groped their way back to the spring. The weary time dragged on; they slept again, and awoke famished and woe-stricken. Tom believed it must be Tuesday by this time.</textarea>
+					</label>
+					<label class="c-field">
+						<span class="c-field__label">Select</span>
+						<select>
+							<option></option>
+							<optgroup label="Email">
+								<option>c.chapman@sterlingindustries.com</option>
+								<option>carolyn@gmail.com</option>
+							</optgroup>
+							<optgroup label="Other">
+								<option>1-416-555-9832</option>
+							</optgroup>
+						</select>
+					</label>
+					<label class="c-field">
+						<input type="checkbox" checked>
+						<span class="c-field__label c-field__label--checkbox is-required">Checkbox</span>
+					</label>
+					<fieldset class="c-field">
+						<legend class="c-field__label">Checkbox Group</legend>
+						<ul class="o-list-bare c-choices">
+							<li class="c-choices__item">
+								<label>
+									<input type="checkbox" checked>
+									<span class="c-field__label c-field__label--checkbox">Security alerts</span>
+								</label>
+							</li>
+							<li class="c-choices__item">
+								<label>
+									<input type="checkbox">
+									<span class="c-field__label c-field__label--checkbox">Product releases</span>
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="c-field">
+						<legend class="c-field__label">Radio Group</legend>
+						<ul class="o-list-bare o-list-inline c-choices">
+							<li class="o-list-inline__item c-choices__item">
+								<label>
+									<input name="radio-group" type="radio" checked>
+									<span class="c-field__label c-field__label--radio">Email</span>
+								</label>
+							</li>
+							<li class="o-list-inline__item c-choices__item">
+								<label>
+									<input name="radio-group" type="radio">
+									<span class="c-field__label c-field__label--radio">Phone</span>
+								</label>
+							</li>
+							<li class="o-list-inline__item c-choices__item">
+								<label>
+									<input name="radio-group" type="radio">
+									<span class="c-field__label c-field__label--radio">None</span>
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+					<label class="c-field c-switch">
+						<input type="checkbox" class="c-switch__input u-sr-only">
+						<span class="c-switch__slider"></span>
+						<span class="c-switch__label">Switch</span>
+					</label>
+					<fieldset class="c-field">
+						<legend class="c-field__label">Switch Group</legend>
+						<ul class="o-list-bare c-choices">
+							<li class="c-choices__item">
+								<label class="c-switch">
+									<input type="checkbox" class="c-switch__input u-sr-only" checked>
+									<span class="c-switch__slider"></span>
+									<span class="c-switch__label">Security alerts</span>
+								</label>
+							</li>
+							<li class="c-choices__item">
+								<label class="c-switch">
+									<input type="checkbox" class="c-switch__input u-sr-only">
+									<span class="c-switch__slider"></span>
+									<span class="c-switch__label">Product releases</span>
+								</label>
+							</li>
+						</ul>
+					</fieldset>
 				</form>
 			</div>
 			<form>
 				<div class="u-border-bottom">
 					<div class="o-box">
-						<h3>Details</h3>
-						<div class="c-field--inline">
-							<div class="c-field">
-								<label class="c-select">
-									<span class="c-field__label">Greeting</span>
-									<select class="c-select__input" required>
-										<option>Mr.</option>
-										<option>Mrs.</option>
-										<option selected>Ms.</option>
-										<option>Dr.</option>
-										<option>Sir</option>
-										<option>Other</option>
-									</select>
-								</label>
-							</div>
-							<div class="c-field">
-								<label class="c-input">
-									<span class="c-field__label c-field__label--required">First Name</span>
-									<input type="text" class="c-input__input" value="Carolyn" required>
-								</label>
-							</div>
-							<div class="c-field">
-								<label class="c-input">
-									<span class="c-field__label c-field__label--required">Last Name</span>
-									<input type="text" class="c-input__input" value="Chapman" required>
-								</label>
-							</div>
-							<div class="c-field">
-								<label class="c-input">
-									<span class="c-field__label c-field__label--required">Email Address</span>
-									<input type="email" class="c-input__input" value="c.chapman@sterlingindustries.com" required>
-								</label>
-							</div>
-							<div class="c-field">
-								<fieldset class="c-choice-list">
-									<legend class="c-field__label">Contact Method</legend>
-									<ul class="o-list-bare c-choice-list__choices">
-										<li class="c-choice-list__item">
-											<label class="c-radio">
-												<input name="contact-method" type="radio" value="email" class="c-radio__input">
-												<span class="c-radio__label">Email</span>
-											</label>
-										</li>
-										<li class="c-choice-list__item">
-											<label class="c-radio">
-												<input name="contact-method" type="radio" class="c-radio__input" value="phone" checked>
-												<span class="c-radio__label">Phone</span>
-											</label>
-										</li>
-									</ul>
-								</fieldset>
-							</div>
-						</div>
+						<h3>Inline Form Fiedls</h3>
+						<label class="c-field c-field--inline">
+							<span class="c-field__label is-required">Greeting</span>
+							<select required>
+								<option>Mr.</option>
+								<option>Mrs.</option>
+								<option selected>Ms.</option>
+								<option>Dr.</option>
+								<option>Sir</option>
+								<option>Other</option>
+							</select>
+						</label>
+						<label class="c-field c-field--inline">
+							<span class="c-field__label">First Name</span>
+							<input type="text" value="Carolyn">
+						</label>
+						<label class="c-field c-field--inline">
+							<span class="c-field__label">Last Name</span>
+							<input type="text" value="Chapman">
+						</label>
+						<label class="c-field c-field--inline">
+							<span class="c-field__label">Email Address</span>
+							<input type="email" value="c.chapman@sterlingindustries" class="c-input-error">
+							<span class="c-field__help-text u-text-error">This email address is invalid.</span>
+						</label>
+						<label class="c-field c-field--inline">
+							<span class="c-field__label">Bio</span>
+							<textarea></textarea>
+						</label>
+						<fieldset class="c-field c-field--inline">
+							<legend class="c-field__label">Contact Method</legend>
+							<ul class="o-list-bare c-choices">
+								<li class="c-choices__item">
+									<label>
+										<input name="contact-method" type="radio" value="email">
+										<span class="c-field__label c-field__label--radio">Email</span>
+									</label>
+								</li>
+								<li class="c-choices__item">
+									<label>
+										<input name="contact-method" type="radio" value="phone" checked>
+										<span class="c-field__label c-field__label--radio">Phone</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
 					</div>
 				</div>
 			</form>
