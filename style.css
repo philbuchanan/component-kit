@@ -1288,7 +1288,7 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 14px;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s;
+  transition: transform 0.2s;
 }
 
 .c-table--fixed {

@@ -46,6 +46,6 @@
 		width: 14px;
 		border-radius: 50%;
 		box-shadow: $dropshadow--light;
-		transition: transform 0.4s;
+		transition: transform $duration;
 	}
 }
