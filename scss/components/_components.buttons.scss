@@ -1,6 +1,10 @@
 // # Components: Buttons
 // -----------------------------------------------------------------------------
 
+// 1. Left padding is calculated by adding the width of the loading icon plus
+//    the left padding of the base button class plus a small right margin after
+//    the icon.
+
 .c-button {
 	display: inline-block;
 	color: $color-text;
@@ -30,6 +34,13 @@
 		position: relative;
 		top: 1px;
 		box-shadow: none;
+	}
+
+	&.is-loading {
+		background-image: url("images/icons/loading.svg");
+		background-repeat: no-repeat;
+		background-position: 10px center;
+		padding-left: 31px; // [1]
 	}
 }
 
@@ -75,6 +86,15 @@
 	}
 }
 
+.c-button--primary,
+.c-button--danger {
+	&.is-loading {
+		background-image: url("images/icons/loading-ko.svg");
+	}
+}
+
+// 1. Remove the extra 10 pixels of left padding that link buttons don't have.
+
 .c-button--link {
 	@include button-bare();
 	color: $color-link;
@@ -83,6 +103,11 @@
 	&:hover {
 		color: $color-link;
 		text-decoration: none;
+	}
+
+	&.is-loading {
+		background-position-x: 0; // [1]
+		padding-left: 21px; // [1]
 	}
 }
 
