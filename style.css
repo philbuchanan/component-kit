@@ -1299,6 +1299,10 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #fafafa;
 }
 
+.c-table--ruled tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .c-table--hover tbody tr:hover {
   background-color: #fafafa;
 }
