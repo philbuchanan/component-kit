@@ -430,7 +430,7 @@ select::-ms-expand {
 }
 
 [type="range"]::-webkit-slider-runnable-track {
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
   width: 100%;
@@ -452,7 +452,7 @@ select::-ms-expand {
 }
 
 [type="range"]::-moz-range-track {
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
   width: 100%;
@@ -474,7 +474,7 @@ select::-ms-expand {
 }
 
 [type="range"]::-ms-track {
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
   width: 100%;
@@ -485,7 +485,7 @@ select::-ms-expand {
 
 @includerange- track;
 [type="range"]::-ms-fill-upper {
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
   width: 100%;
@@ -1368,11 +1368,12 @@ select::-ms-expand {
 }
 
 .c-switch__input:checked + .c-switch__slider:before {
-  -webkit-transform: translateX(12px);
-  -moz-transform: translateX(12px);
-  -ms-transform: translateX(12px);
-  -o-transform: translateX(12px);
-  transform: translateX(12px);
+  background-image: url("images/icons/check-small.svg");
+  -webkit-transform: translateX(14px);
+  -moz-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  -o-transform: translateX(14px);
+  transform: translateX(14px);
 }
 
 .c-switch__input:focus + .c-switch__slider {
@@ -1382,26 +1383,30 @@ select::-ms-expand {
 .c-switch__slider {
   display: inline-block;
   position: relative;
-  top: 3px;
+  top: 5px;
   cursor: pointer;
   background-color: #bfbfbf;
-  width: 28px;
-  height: 16px;
+  width: 34px;
+  height: 20px;
   margin-right: 4px;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.4s;
+  transition: background-color 0.2s;
   overflow: hidden;
 }
 
 .c-switch__slider:before {
   content: "";
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 2px;
+  left: 2px;
   background-color: #fff;
-  height: 14px;
-  width: 14px;
+  background-image: url("images/icons/close-small.svg");
+  background-position: center center;
+  background-size: 7px 7px;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s;
