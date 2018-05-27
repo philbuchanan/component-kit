@@ -573,7 +573,7 @@ select::-ms-expand {
 }
 
 .o-container--xxs {
-  width: 170px;
+  width: 180px;
 }
 
 .o-container--xs {
@@ -945,9 +945,9 @@ select::-ms-expand {
   content: "";
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid currentColor;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
   margin-left: 5px;
 }
 
@@ -1060,7 +1060,8 @@ select::-ms-expand {
 .c-list-link {
   display: block;
   text-decoration: none;
-  padding: 6px 12px;
+  width: 100%;
+  padding: 12px;
 }
 
 .c-list-link:hover {
@@ -1070,6 +1071,10 @@ select::-ms-expand {
 
 .c-list-link--separated {
   border-top: 1px solid #e5e5e5;
+}
+
+.c-list-link--small {
+  padding: 6px 12px;
 }
 
 .c-modal {

@@ -8,7 +8,8 @@
 .c-list-link {
 	display: block;
 	text-decoration: none;
-	padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+	width: 100%;
+	padding: $global-spacing-unit-small;
 
 	&:hover {
 		background-color: $color-hover-bg;
@@ -18,4 +19,8 @@
 
 .c-list-link--separated {
 	border-top: 1px solid $color-border--light;
+}
+
+.c-list-link--small {
+	padding: $global-spacing-unit-tiny $global-spacing-unit-small;
 }
