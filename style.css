@@ -997,7 +997,7 @@ select::-ms-expand {
   margin-bottom: 0;
 }
 
-.c-field__help-text {
+.c-field__text {
   display: inline-block;
   font-size: 0.85rem;
   margin-bottom: 0;
@@ -1057,7 +1057,7 @@ select::-ms-expand {
   padding-right: 0;
 }
 
-.c-field--inline .c-field__help-text {
+.c-field--inline .c-field__text {
   margin-left: 120px;
 }
 

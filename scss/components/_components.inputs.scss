@@ -42,7 +42,7 @@
 // ## Field Help Text
 // -----------------------------------------------------------------------------
 
-.c-field__help-text {
+.c-field__text {
 	display: inline-block;
 	font-size: $font-size-h6;
 	margin-bottom: 0;
@@ -127,7 +127,7 @@ $label-width: 120px;
 		padding-right: 0;
 	}
 
-	.c-field__help-text {
+	.c-field__text {
 		margin-left: $label-width;
 	}
 }
