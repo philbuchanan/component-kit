@@ -1012,6 +1012,11 @@ select::-ms-expand {
   box-shadow: 0 0 0 1px #e00;
 }
 
+[disabled] ~ .c-field__label--radio,
+[disabled] ~ .c-field__label--checkbox {
+  opacity: 0.4;
+}
+
 .c-choices__item:not(:last-child) {
   margin-right: 24px;
 }
@@ -1409,6 +1414,12 @@ select::-ms-expand {
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s;
+}
+
+[disabled] ~ .c-switch__slider,
+[disabled] ~ .c-switch__label {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .c-table--fixed {
