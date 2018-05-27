@@ -58,3 +58,18 @@
 		transition: transform $duration;
 	}
 }
+
+
+
+// ## Disabled Switch
+// -----------------------------------------------------------------------------
+
+// 1. This specificity is necessary in order to select the switch label.
+
+[disabled] {
+	~ .c-switch__slider,
+	~ .c-switch__label {
+		opacity: 0.4;
+		pointer-events: none;
+	}
+}
