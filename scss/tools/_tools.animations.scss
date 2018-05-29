@@ -87,22 +87,3 @@
 		@include translate3d(0, 30%, 0);
 	}
 }
-
-
-
-// ## Animations: Pulse
-// -----------------------------------------------------------------------------
-
-@keyframes pulse {
-	from {
-		@include scale3d(1, 1, 1);
-	}
-
-	50% {
-		@include scale3d(1.5, 1.5, 1.5);
-	}
-
-	to {
-		@include scale3d(1, 1, 1);
-	}
-}
