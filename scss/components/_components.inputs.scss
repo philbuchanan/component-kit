@@ -5,9 +5,9 @@
 // -----------------------------------------------------------------------------
 
 .c-field {
-	@include clearfix();
 	display: block;
 	margin-bottom: $global-spacing-unit;
+	@include clearfix();
 }
 
 
@@ -16,25 +16,16 @@
 // -----------------------------------------------------------------------------
 
 .c-field__label {
-	display: block;
-	font-size: $font-size-h4;
+	display: inline-block;
 	font-weight: $font-weight-bold;
-	margin-bottom: 2px;
+	margin-bottom: $global-spacing-unit-tiny;
 
 	&.is-required {
 		&:after {
 			content: "*";
-			margin-left: 2px;
+			margin-left: 3px;
 		}
 	}
-}
-
-.c-field__label--radio,
-.c-field__label--checkbox {
-	display: inline;
-	font-size: $global-font-size;
-	font-weight: $font-weight-normal;
-	margin-bottom: 0;
 }
 
 
@@ -43,7 +34,7 @@
 // -----------------------------------------------------------------------------
 
 .c-field__text {
-	display: inline-block;
+	display: block;
 	font-size: $font-size-h6;
 	margin-bottom: 0;
 }
@@ -67,9 +58,41 @@
 // ## Checkboxes and Radio Buttons
 // -----------------------------------------------------------------------------
 
+// 1. Remoe the default bottom margin applied to all field labels from checkbox
+//    and radio labels.
+
+.c-radio,
+.c-checkbox {
+	display: inline-block;
+	padding-left: 20px;
+	@include clearfix();
+
+	.c-field__label {
+		margin-bottom: 0; // [1]
+	}
+}
+
+[type="radio"],
+[type="checkbox"] {
+	float: left;
+	margin-top: 4px;
+	margin-left: -20px;
+
+	&:focus {
+		outline: none;
+
+		~ .c-field__label {
+			box-shadow: 0 0 0 2px $color-primary;
+		}
+	}
+}
+
+.c-radio--inline {
+	margin-right: 20px;
+}
+
 [disabled] {
-	~ .c-field__label--radio,
-	~ .c-field__label--checkbox {
+	~ .c-field__label {
 		opacity: 0.4;
 	}
 }
@@ -79,55 +102,10 @@
 // ## Choice List
 // -----------------------------------------------------------------------------
 
+// Add a little space below a group of checkboxes.
+
 .c-choices__item {
 	&:not(:last-child) {
-		margin-right: $global-spacing-unit;
-	}
-}
-
-
-
-// ## Inline Field Labels
-// -----------------------------------------------------------------------------
-
-$label-width: 120px;
-
-.c-field--inline {
-	margin-bottom: $global-spacing-unit-small;
-
-	[type="text"],
-	[type="password"],
-	[type="search"],
-	[type="email"],
-	[type="tel"],
-	[type="url"],
-	[type="number"],
-	[type="date"],
-	[type="week"],
-	[type="month"],
-	[type="datetime-local"],
-	[type="color"]
-	[type="range"],
-	textarea,
-	select {
-		float: left;
-		width: calc(100% - #{$label-width});
-	}
-
-	.c-field__label {
-		float: left;
-		width: $label-width;
-		padding-right: 10px;
-	}
-
-	.c-field__label--radio,
-	.c-field__label--checkbox {
-		float: none;
-		width: auto;
-		padding-right: 0;
-	}
-
-	.c-field__text {
-		margin-left: $label-width;
+		margin-bottom: $global-spacing-unit-tiny;
 	}
 }
