@@ -15,8 +15,6 @@
 	z-index: $z-index-modal;
 	@include animate();
 	@include animation('fadeIn');
-	-webkit-backdrop-filter: blur(3px);
-	        backdrop-filter: blur(3px);
 
 	&.is-open {
 		display: block;
@@ -41,17 +39,4 @@
 	box-shadow: $dropshadow;
 	@include animate();
 	@include animation('slideInUp');
-}
-
-.c-modal__close-button {
-	position: absolute;
-	top: 0;
-	right: 0;
-	color: $color-link;
-	text-align: center;
-	font-size: $font-size-h1;
-	line-height: 1;
-	width: 35px;
-	height: 35px;
-	padding: 0 0 4px;
 }
