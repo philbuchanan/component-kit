@@ -36,6 +36,10 @@
 // ## Text Style
 // -----------------------------------------------------------------------------
 
+.u-text-monospace {
+	font-family: $font-family-mono !important;
+}
+
 .u-text-small {
 	font-size: $font-size-h6 !important;
 }
