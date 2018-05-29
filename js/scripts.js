@@ -136,37 +136,49 @@
 
 		Object.assign(classes, modal.dataset);
 
-		this.components = {
-			modal:      modal,
-			openModal:  document.querySelectorAll('.' + classes.openModal),
-			closeModal: document.querySelectorAll('.' + classes.closeModal),
-		};
+		this.modal         = modal;
+		this.openModalBtn  = document.querySelectorAll('.' + classes.openModal),
+		this.closeModalBtn = document.querySelectorAll('.' + classes.closeModal),
 
 		this.state = {
 			open: false
 		};
 
+		this.createModal = function() {
+			var id = 'modal-' + Math.random().toString(36).substring(6);
+			var title = this.modal.querySelector('h2');
+
+			if (title) {
+				this.modal.setAttribute('aria-labelledby', id);
+				title.id = id;
+			}
+		}
+
 		this.openModal = function() {
-			_self.components.modal.classList.add('is-open');
-			_self.state.open = true;
+			this.modal.classList.add('is-open');
+			this.modal.setAttribute('aria-hidden', 'false');
+			this.state.open = true;
 		};
 
 		this.closeModal = function() {
-			_self.components.modal.classList.add('is-closing');
-			_self.components.modal.classList.remove('is-open');
+			this.modal.classList.add('is-closing');
+			this.modal.classList.remove('is-open');
 
 			setTimeout(function() {
-				_self.components.modal.classList.remove('is-closing');
+				_self.modal.classList.remove('is-closing');
+				_self.modal.setAttribute('aria-hidden', 'true');
 				_self.state.open = false;
 			}, duration);
 		};
 
-		Array.from(_self.components.openModal).forEach(button => {
-			button.addEventListener('click', _self.openModal);
+		this.createModal();
+
+		Array.from(_self.openModalBtn).forEach(button => {
+			button.addEventListener('click', _self.openModal.bind(_self));
 		});
 
-		Array.from(_self.components.closeModal).forEach(button => {
-			button.addEventListener('click', _self.closeModal);
+		Array.from(_self.closeModalBtn).forEach(button => {
+			button.addEventListener('click', _self.closeModal.bind(_self));
 		});
 
 		document.addEventListener('keyup', function(event) {

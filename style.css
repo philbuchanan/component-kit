@@ -950,6 +950,23 @@ select::-ms-expand {
   margin-left: 5px;
 }
 
+.c-button-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: inherit;
+  text-align: center;
+  font-size: 1.85rem;
+  line-height: 1;
+  width: 35px;
+  height: 35px;
+  padding: 0 0 4px;
+}
+
+.c-button-close:hover {
+  color: #7342ab;
+}
+
 .c-button-bar .c-button:not(:last-child) {
   margin-right: 6px;
 }
@@ -1088,7 +1105,7 @@ select::-ms-expand {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   overflow-y: scroll;
   z-index: 300;
   -webkit-animation-duration: 0.2s;
@@ -1111,8 +1128,6 @@ select::-ms-expand {
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
 }
 
 .c-modal.is-open {
@@ -1173,19 +1188,6 @@ select::-ms-expand {
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
-
-.c-modal__close-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #7342ab;
-  text-align: center;
-  font-size: 1.85rem;
-  line-height: 1;
-  width: 35px;
-  height: 35px;
-  padding: 0 0 4px;
 }
 
 .c-nav-bar {

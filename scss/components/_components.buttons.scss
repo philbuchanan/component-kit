@@ -113,7 +113,7 @@
 
 
 
-// Button Modifiers
+// ## Button Modifiers
 // -----------------------------------------------------------------------------
 
 .c-button--full-width {
@@ -132,6 +132,28 @@
 		border-right: 4px solid transparent;
 		border-top: 4px solid currentColor;
 		margin-left: 5px;
+	}
+}
+
+
+
+// ## Close Button
+// -----------------------------------------------------------------------------
+
+.c-button-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: inherit;
+	text-align: center;
+	font-size: $font-size-h1;
+	line-height: 1;
+	width: 35px;
+	height: 35px;
+	padding: 0 0 4px;
+
+	&:hover {
+		color: $color-link;
 	}
 }
 
