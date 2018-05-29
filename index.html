@@ -154,24 +154,24 @@
 										<h2>Sorry to see you go!</h2>
 										<p>We'd love to know why you decided to downgrade.</p>
 										<fieldset class="c-field">
-											<legend class="c-field__label">Please select up to 3 items</legend>
+											<legend class="u-sr-only">Reasons for Downgrading</legend>
 											<ul class="o-list-bare c-choices">
 												<li class="c-choices__item">
-													<label>
+													<label class="c-checkbox">
 														<input type="checkbox">
-														<span class="c-checkbox__label">Lacking features</span>
+														<span class="c-field__label">Lacking features</span>
 													</label>
 												</li>
 												<li class="c-choices__item">
-													<label>
+													<label class="c-checkbox">
 														<input type="checkbox">
-														<span class="c-checkbox__label">Confusing interface</span>
+														<span class="c-field__label">Confusing interface</span>
 													</label>
 												</li>
 												<li class="c-choices__item">
-													<label>
+													<label class="c-checkbox">
 														<input type="checkbox">
-														<span class="c-checkbox__label">Account made in error</span>
+														<span class="c-field__label">Account made in error</span>
 													</label>
 												</li>
 											</ul>
@@ -328,7 +328,8 @@
 					</label>
 					<label class="c-field">
 						<span class="c-field__label">Disabled</span>
-						<input type="text" value="Chapman" disabled>
+						<input type="text" value="chapman" disabled>
+						<span class="c-field__text">Usernames cannot be changed.</span>
 					</label>
 					<label class="c-field">
 						<span class="c-field__label">Textarea</span>
@@ -347,46 +348,72 @@
 							</optgroup>
 						</select>
 					</label>
-					<label class="c-field">
+					<label class="c-field c-checkbox">
 						<input type="checkbox" checked>
-						<span class="c-field__label c-field__label--checkbox is-required">Checkbox</span>
+						<span class="c-field__label is-required">Checkbox</span>
+						<span class="c-field__text">This text helps describe the checkbox.</span>
 					</label>
-					<fieldset class="c-field">
+					<fieldset class="c-field c-field--group">
 						<legend class="c-field__label">Checkbox Group</legend>
 						<ul class="o-list-bare c-choices">
 							<li class="c-choices__item">
-								<label>
-									<input type="checkbox" checked>
-									<span class="c-field__label c-field__label--checkbox">Security alerts</span>
+								<label class="c-checkbox">
+									<input type="checkbox" checked disabled>
+									<span class="c-field__label">Security alerts related to your account</span>
+									<span class="c-field__text">All account security alerts will be emailed to c.chapman@sterlingindustries.com.</span>
 								</label>
 							</li>
 							<li class="c-choices__item">
-								<label>
-									<input type="checkbox" disabled>
-									<span class="c-field__label c-field__label--checkbox">Product releases</span>
+								<label class="c-checkbox">
+									<input type="checkbox">
+									<span class="c-field__label">Product releases</span>
 								</label>
 							</li>
 						</ul>
 					</fieldset>
-					<fieldset class="c-field">
+					<fieldset class="c-field c-field--group">
 						<legend class="c-field__label">Radio Group</legend>
-						<ul class="o-list-bare o-list-inline c-choices">
-							<li class="o-list-inline__item c-choices__item">
-								<label>
+						<ul class="o-list-bare c-choices">
+							<li class="c-choices__item">
+								<label class="c-radio">
 									<input name="radio-group" type="radio" checked>
-									<span class="c-field__label c-field__label--radio">Email</span>
+									<span class="c-field__label">Email</span>
 								</label>
 							</li>
-							<li class="o-list-inline__item c-choices__item">
-								<label>
-									<input name="radio-group" type="radio" disabled>
-									<span class="c-field__label c-field__label--radio">Phone</span>
-								</label>
-							</li>
-							<li class="o-list-inline__item c-choices__item">
-								<label>
+							<li class="c-choices__item">
+								<label class="c-radio">
 									<input name="radio-group" type="radio">
-									<span class="c-field__label c-field__label--radio">None</span>
+									<span class="c-field__label">Phone</span>
+									<span class="c-field__text">You'll only receive calls between 9 AM and 5 PM.</span>
+								</label>
+							</li>
+							<li class="c-choices__item">
+								<label class="c-radio">
+									<input name="radio-group" type="radio">
+									<span class="c-field__label">None</span>
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="c-field c-field--group">
+						<legend class="c-field__label">Inline Radio Group</legend>
+						<ul class="o-list-bare o-list-inline">
+							<li class="o-list-inline__item">
+								<label class="c-radio c-radio--inline">
+									<input name="inline-radio-group" type="radio" checked>
+									<span class="c-field__label">Email</span>
+								</label>
+							</li>
+							<li class="o-list-inline__item">
+								<label class="c-radio c-radio--inline">
+									<input name="inline-radio-group" type="radio" disabled>
+									<span class="c-field__label">Phone</span>
+								</label>
+							</li>
+							<li class="o-list-inline__item">
+								<label class="c-radio c-radio--inline">
+									<input name="inline-radio-group" type="radio">
+									<span class="c-field__label">None</span>
 								</label>
 							</li>
 						</ul>
@@ -395,6 +422,7 @@
 						<input type="checkbox" class="c-switch__input u-sr-only">
 						<span class="c-switch__slider"></span>
 						<span class="c-switch__label">Switch</span>
+						<span class="c-field__text">Switches can have field text too.</span>
 					</label>
 					<fieldset class="c-field">
 						<legend class="c-field__label">Switch Group</legend>
@@ -424,58 +452,6 @@
 					</fieldset>
 				</form>
 			</div>
-			<form>
-				<div class="u-border-bottom">
-					<div class="o-box">
-						<h3>Inline Form Fiedls</h3>
-						<label class="c-field c-field--inline">
-							<span class="c-field__label is-required">Greeting</span>
-							<select required>
-								<option>Mr.</option>
-								<option>Mrs.</option>
-								<option selected>Ms.</option>
-								<option>Dr.</option>
-								<option>Sir</option>
-								<option>Other</option>
-							</select>
-						</label>
-						<label class="c-field c-field--inline">
-							<span class="c-field__label">First Name</span>
-							<input type="text" value="Carolyn">
-						</label>
-						<label class="c-field c-field--inline">
-							<span class="c-field__label">Last Name</span>
-							<input type="text" value="Chapman">
-						</label>
-						<label class="c-field c-field--inline">
-							<span class="c-field__label">Email Address</span>
-							<input type="email" value="c.chapman@sterlingindustries" class="c-input-error">
-							<span class="c-field__text u-text-error">This email address is invalid.</span>
-						</label>
-						<label class="c-field c-field--inline">
-							<span class="c-field__label">Bio</span>
-							<textarea></textarea>
-						</label>
-						<fieldset class="c-field c-field--inline">
-							<legend class="c-field__label">Contact Method</legend>
-							<ul class="o-list-bare c-choices">
-								<li class="c-choices__item">
-									<label>
-										<input name="contact-method" type="radio" value="email">
-										<span class="c-field__label c-field__label--radio">Email</span>
-									</label>
-								</li>
-								<li class="c-choices__item">
-									<label>
-										<input name="contact-method" type="radio" value="phone" checked>
-										<span class="c-field__label c-field__label--radio">Phone</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
-					</div>
-				</div>
-			</form>
 			<div class="o-box">
 				<h2>Tables</h2>
 			</div>
