@@ -1,4 +1,4 @@
-// # Media Queries
+// # Tools: Media Queries
 // -----------------------------------------------------------------------------
 
 // Define media queries
@@ -8,33 +8,42 @@
 // }
 
 @mixin respond-to($breakpoint) {
-	$value: map-get($breakpoints, $breakpoint);
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	}
+	@else {
+		@error "`#{$breakpoint}` isn't defined in `$breakpoints` map.";
+	}
+}
 
-	@media screen and (min-width: $value) {
+@mixin respond-to-nav {
+	@media screen and (min-width: $breakpoint-nav) {
 		@content;
 	}
 }
 
 @mixin respond-to-tiny-only {
-	@media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
+	@media screen and (max-width: (map-get($breakpoints, small) - 1)) {
 		@content;
 	}
 }
 
 @mixin respond-to-small-only {
-	@media screen and (min-width: map-get($breakpoints, sm)) and (max-width: (map-get($breakpoints, md) - 1)) {
+	@media screen and (min-width: map-get($breakpoints, small)) and (max-width: (map-get($breakpoints, medium) - 1)) {
 		@content;
 	}
 }
 
 @mixin respond-to-medium-only {
-	@media screen and (min-width: map-get($breakpoints, md)) and (max-width: (map-get($breakpoints, lg) - 1)) {
+	@media screen and (min-width: map-get($breakpoints, medium)) and (max-width: (map-get($breakpoints, large) - 1)) {
 		@content;
 	}
 }
 
 @mixin respond-to-large-only {
-	@media screen and (min-width: map-get($breakpoints, lg)) {
+	@media screen and (min-width: map-get($breakpoints, large)) {
 		@content;
 	}
 }
