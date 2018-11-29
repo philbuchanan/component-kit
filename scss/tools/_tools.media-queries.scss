@@ -31,13 +31,13 @@
 }
 
 @mixin respond-to-small-only {
-	@media screen and (min-width: map-get($breakpoints, sm)) and (max-width: (map-get($breakpoints, medium) - 1)) {
+	@media screen and (min-width: map-get($breakpoints, sm)) and (max-width: (map-get($breakpoints, md) - 1)) {
 		@content;
 	}
 }
 
 @mixin respond-to-medium-only {
-	@media screen and (min-width: map-get($breakpoints, md)) and (max-width: (map-get($breakpoints, large) - 1)) {
+	@media screen and (min-width: map-get($breakpoints, md)) and (max-width: (map-get($breakpoints, lg) - 1)) {
 		@content;
 	}
 }
