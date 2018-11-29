@@ -1,6 +1,17 @@
 // # Settings: Sass Variables
 // -----------------------------------------------------------------------------
 
+// ## Features
+// -----------------------------------------------------------------------------
+
+$setting-use-grid-offsets:          false;
+$setting-use-grid-source-order:     false;
+$setting-use-block-grid:            true;
+$setting-use-spacing-classes:       false;
+$setting-use-hidden-classes:        false;
+$setting-use-ratio-classes:         false;
+
+
 // ## Color Variables
 // -----------------------------------------------------------------------------
 
@@ -59,14 +70,20 @@ $font-weight-bold:                  600;
 // ## Grid
 // -----------------------------------------------------------------------------
 
-$wrapper-width:                     1200px;
+$wrapper-width:                     81em;
 $fractions:                         (12);
-$gutter:                            round($global-spacing-unit * 0.5);
+$total-block-grid-columns:          5;
+$gutter:                            15px;
+
+// Breakpoints
+$breakpoint-nav:                    48em;
 
 $breakpoints: (
-	sm: 475px,
-	md: 640px,
-	lg: 900px,
+	// No suffix on classes for < 475px
+	small:  30em,
+	medium: 40em,
+	large:  56em,
+	full:   $wrapper-width
 );
 
 

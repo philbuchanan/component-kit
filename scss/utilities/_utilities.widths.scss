@@ -1,4 +1,4 @@
-// # Utilities: Widths
+// # Utilities: Widths & Heights
 // -----------------------------------------------------------------------------
 
 @mixin widths($columns, $breakpoint: null) {
@@ -11,6 +11,12 @@
 			.u-#{$numerator}of#{$denominator}#{$breakpoint} {
 				width: ($numerator / $denominator) * 100% !important;
 			}
+
+			@if $setting-use-grid-offsets {
+				.u-offset-#{$numerator}of#{$denominator}#{$breakpoint} {
+					margin-left: ($numerator / $denominator) * 100% !important;
+				}
+			}
 		}
 	}
 }
@@ -18,7 +24,10 @@
 
 
 // Add classes for each of the $fractions in `variables.scss`
-// e.g. .u-6of12-large, .u-8of12-small, .u-9of12-medium
+// e.g. .u-6of12, .u-8of12-large, .u-9of12-medium
+
+// No suffix on classes for < small breakpoint
+@include widths($fractions);
 
 @each $name, $size in $breakpoints {
 	@include respond-to(#{$name}) {
@@ -32,12 +41,16 @@
 // ## Width Resets
 // -----------------------------------------------------------------------------
 
-.u-full-width {
-	width: 100% !important;
-	max-width: none !important;
-}
-
 .u-reset-width {
 	width: auto !important;
 	max-width: none !important;
+}
+
+
+
+// ## Heights
+// -----------------------------------------------------------------------------
+
+.u-full-height {
+	height: 100% !important;
 }
