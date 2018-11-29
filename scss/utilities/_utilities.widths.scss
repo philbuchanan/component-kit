@@ -12,10 +12,8 @@
 				width: ($numerator / $denominator) * 100% !important;
 			}
 
-			@if $setting-use-grid-offsets {
-				.u-offset-#{$numerator}of#{$denominator}#{$breakpoint} {
-					margin-left: ($numerator / $denominator) * 100% !important;
-				}
+			.u-offset-#{$numerator}of#{$denominator}#{$breakpoint} {
+				margin-left: ($numerator / $denominator) * 100% !important;
 			}
 		}
 	}

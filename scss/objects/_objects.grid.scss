@@ -31,26 +31,24 @@
 // ### Source Ordering
 // -----------------------------------------------------------------------------
 
-@if $setting-use-grid-source-order {
-	// No suffix on classes for < small breakpoint
-	.o-col--first {
-		order: -1;
-	}
+// No suffix on classes for < small breakpoint
+.o-col--first {
+	order: -1;
+}
 
-	.o-col--last {
-		order: 1;
-	}
+.o-col--last {
+	order: 1;
+}
 
-	@each $name, $size in $breakpoints {
-		@include respond-to(#{$name}) {
-			$suffix: "-#{$name}";
-			.o-col--first#{$suffix} {
-				order: -1;
-			}
+@each $name, $size in $breakpoints {
+	@include respond-to(#{$name}) {
+		$suffix: "-#{$name}";
+		.o-col--first#{$suffix} {
+			order: -1;
+		}
 
-			.o-col--last#{$suffix} {
-				order: 1;
-			}
+		.o-col--last#{$suffix} {
+			order: 1;
 		}
 	}
 }
@@ -70,32 +68,30 @@
 	}
 }
 
-@if $setting-use-block-grid {
-	.o-block-grid {
-		display: flex;
-		flex: 0 1 auto;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
+.o-block-grid {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
 
-	.o-row .o-block-grid {
-		margin-left: -$gutter;
-		margin-right: -$gutter;
-	}
+.o-row .o-block-grid {
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+}
 
-	.o-block-grid__item {
-		width: 100%;
-		margin-bottom: $gutter * 2;
-		padding-left: $gutter;
-		padding-right: $gutter;
-	}
+.o-block-grid__item {
+	width: 100%;
+	margin-bottom: $gutter * 2;
+	padding-left: $gutter;
+	padding-right: $gutter;
+}
 
-	@include block-grid-loop();
+@include block-grid-loop();
 
-	@each $name, $size in $breakpoints {
-		@include respond-to(#{$name}) {
-			$suffix: "-#{$name}";
-			@include block-grid-loop($suffix);
-		}
+@each $name, $size in $breakpoints {
+	@include respond-to(#{$name}) {
+		$suffix: "-#{$name}";
+		@include block-grid-loop($suffix);
 	}
 }
