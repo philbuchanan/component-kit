@@ -22,7 +22,7 @@
 
 
 // Add classes for each of the $fractions in `variables.scss`
-// e.g. .u-6of12, .u-8of12-large, .u-9of12-medium
+// e.g. .u-6of12, .u-8of12-lg, .u-9of12-md
 
 // No suffix on classes for < small breakpoint
 @include widths($fractions);
