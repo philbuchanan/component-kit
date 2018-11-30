@@ -107,7 +107,7 @@ hr {
 html {
   color: #000;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
   overflow-y: scroll;
   min-height: 100%;
@@ -545,7 +545,7 @@ select::-ms-expand {
 }
 
 .o-container--xxl {
-  width: 92.31em;
+  width: 85.72em;
 }
 
 .o-container--grey {
@@ -663,7 +663,7 @@ select::-ms-expand {
   flex: 0 0 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 92.31em;
+  max-width: 85.72em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -687,7 +687,7 @@ select::-ms-expand {
   order: 1;
 }
 
-@media screen and (min-width: 36.54em) {
+@media screen and (min-width: 33.93em) {
   .o-col--first-sm {
     order: -1;
   }
@@ -696,7 +696,7 @@ select::-ms-expand {
     order: 1;
   }
 }
-@media screen and (min-width: 49.24em) {
+@media screen and (min-width: 45.72em) {
   .o-col--first-md {
     order: -1;
   }
@@ -705,7 +705,7 @@ select::-ms-expand {
     order: 1;
   }
 }
-@media screen and (min-width: 69.24em) {
+@media screen and (min-width: 64.29em) {
   .o-col--first-lg {
     order: -1;
   }
@@ -714,7 +714,7 @@ select::-ms-expand {
     order: 1;
   }
 }
-@media screen and (min-width: 92.31em) {
+@media screen and (min-width: 85.72em) {
   .o-col--first-xl {
     order: -1;
   }
@@ -762,7 +762,7 @@ select::-ms-expand {
   width: 20%;
 }
 
-@media screen and (min-width: 36.54em) {
+@media screen and (min-width: 33.93em) {
   .o-block-grid-1-sm .o-block-grid__item {
     width: 100%;
   }
@@ -783,7 +783,7 @@ select::-ms-expand {
     width: 20%;
   }
 }
-@media screen and (min-width: 49.24em) {
+@media screen and (min-width: 45.72em) {
   .o-block-grid-1-md .o-block-grid__item {
     width: 100%;
   }
@@ -804,7 +804,7 @@ select::-ms-expand {
     width: 20%;
   }
 }
-@media screen and (min-width: 69.24em) {
+@media screen and (min-width: 64.29em) {
   .o-block-grid-1-lg .o-block-grid__item {
     width: 100%;
   }
@@ -825,7 +825,7 @@ select::-ms-expand {
     width: 20%;
   }
 }
-@media screen and (min-width: 92.31em) {
+@media screen and (min-width: 85.72em) {
   .o-block-grid-1-xl .o-block-grid__item {
     width: 100%;
   }
@@ -926,7 +926,7 @@ select::-ms-expand {
   text-align: center;
   vertical-align: baseline;
   font: inherit;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   text-decoration: none;
   border: none;
@@ -1278,7 +1278,7 @@ select::-ms-expand {
 
 .c-nav-bar__link {
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
   max-width: 175px;
   height: 48px;
@@ -1854,7 +1854,7 @@ select::-ms-expand {
   margin-left: 100% !important;
 }
 
-@media screen and (min-width: 36.54em) {
+@media screen and (min-width: 33.93em) {
   .u-1of12-sm {
     width: 8.3333333333% !important;
   }
@@ -1951,7 +1951,7 @@ select::-ms-expand {
     margin-left: 100% !important;
   }
 }
-@media screen and (min-width: 49.24em) {
+@media screen and (min-width: 45.72em) {
   .u-1of12-md {
     width: 8.3333333333% !important;
   }
@@ -2048,7 +2048,7 @@ select::-ms-expand {
     margin-left: 100% !important;
   }
 }
-@media screen and (min-width: 69.24em) {
+@media screen and (min-width: 64.29em) {
   .u-1of12-lg {
     width: 8.3333333333% !important;
   }
@@ -2145,7 +2145,7 @@ select::-ms-expand {
     margin-left: 100% !important;
   }
 }
-@media screen and (min-width: 92.31em) {
+@media screen and (min-width: 85.72em) {
   .u-1of12-xl {
     width: 8.3333333333% !important;
   }

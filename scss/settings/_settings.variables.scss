@@ -34,7 +34,7 @@ $color-hover-bg:                    rgba($color-primary, 0.07);
 $font-family-sans-serif:            -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-mono:                  "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
 
-$global-font-size:                  13px !default;
+$global-font-size:                  14px !default;
 $global-line-height:                1.5 !default;
 
 $global-spacing-unit:               24px !default;
@@ -59,19 +59,19 @@ $font-weight-bold:                  600;
 // ## Grid
 // -----------------------------------------------------------------------------
 
-$wrapper-width:                     92.31em;
+$wrapper-width:                     85.72em;
 $fractions:                         (12);
 $total-block-grid-columns:          5;
 $gutter:                            15px;
 
 // Breakpoints
-$breakpoint-nav:                    59.08em;
+$breakpoint-nav:                    54.86em;
 
 $breakpoints: (
 	// No suffix on classes for < 475px
-	sm:  36.54em,
-	md:  49.24em,
-	lg:  69.24em,
+	sm:  33.93em,
+	md:  45.72em,
+	lg:  64.29em,
 	xl:  $wrapper-width
 );
 
