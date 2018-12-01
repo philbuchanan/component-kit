@@ -26,5 +26,7 @@
 		width: auto;
 		height: auto;
 		z-index: $z-index-skip-link;
+		box-shadow: $dropshadow;
+		outline: none;
 	}
 }

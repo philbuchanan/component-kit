@@ -12,10 +12,6 @@
 	@include clearfix();
 }
 
-.c-switch__label {
-	font-weight: $font-weight-bold;
-}
-
 .c-switch__input {
 	&:checked {
 		+ .c-switch__slider {
@@ -29,7 +25,7 @@
 	}
 
 	&:focus + .c-switch__slider {
-		box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px $color-primary;
+		@include focus-outline(true);
 	}
 }
 
@@ -38,8 +34,6 @@
 // 3. Offset the switch handle inside the slider track.
 
 .c-switch__slider {
-	position: relative;
-	top: -1px;
 	float: left;
 	display: inline-block;
 	cursor: pointer;

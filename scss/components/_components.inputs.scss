@@ -68,6 +68,7 @@
 	@include clearfix();
 
 	.c-field__label {
+		font-weight: $font-weight-normal;
 		margin-bottom: 0; // [1]
 	}
 }
@@ -75,14 +76,14 @@
 [type="radio"],
 [type="checkbox"] {
 	float: left;
-	margin-top: 4px;
+	margin-top: 5px;
 	margin-left: -20px;
 
 	&:focus {
 		outline: none;
 
 		~ .c-field__label {
-			box-shadow: 0 0 0 2px $color-primary;
+			@include focus-outline();
 		}
 	}
 }

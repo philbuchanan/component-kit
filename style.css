@@ -275,8 +275,10 @@ a {
 }
 
 a:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px currentColor;
+  outline-width: 2px;
+  outline-color: #7342ab;
+  outline-style: solid;
+  outline-offset: 2px;
 }
 
 a:hover {
@@ -333,8 +335,8 @@ th {
 }
 
 button:focus {
-  box-shadow: 0 0 0 2px #7342ab;
   outline: none;
+  box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
 [type="text"],
@@ -444,18 +446,22 @@ select::-ms-expand {
 }
 
 [type="range"]:focus::-webkit-slider-runnable-track {
+  outline: none;
   box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
 [type="range"]:focus::-moz-range-track {
+  outline: none;
   box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
 [type="range"]:focus::-ms-fill-lower {
+  outline: none;
   box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
 [type="range"]:focus::-ms-fill-upper {
+  outline: none;
   box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
@@ -513,7 +519,16 @@ select::-ms-expand {
   cursor: pointer;
 }
 
-@includerange- track;
+[type="range"]::-ms-fill-lower {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 8px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
 [type="range"]::-ms-fill-upper {
   background-color: #f2f2f2;
   border: none;
@@ -1045,6 +1060,7 @@ select::-ms-expand {
 }
 
 .c-button--primary:focus {
+  outline: none;
   box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
@@ -1060,6 +1076,7 @@ select::-ms-expand {
 }
 
 .c-button--danger:focus {
+  outline: none;
   box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
@@ -1248,13 +1265,14 @@ select::-ms-expand {
 
 .c-radio .c-field__label,
 .c-checkbox .c-field__label {
+  font-weight: 400;
   margin-bottom: 0;
 }
 
 [type="radio"],
 [type="checkbox"] {
   float: left;
-  margin-top: 4px;
+  margin-top: 5px;
   margin-left: -20px;
 }
 
@@ -1265,7 +1283,10 @@ select::-ms-expand {
 
 [type="radio"]:focus ~ .c-field__label,
 [type="checkbox"]:focus ~ .c-field__label {
-  box-shadow: 0 0 0 2px #7342ab;
+  outline-width: 2px;
+  outline-color: #7342ab;
+  outline-style: solid;
+  outline-offset: 2px;
 }
 
 .c-radio--inline {
@@ -1417,6 +1438,7 @@ select::-ms-expand {
 }
 
 .c-pagination__link:focus {
+  outline: none;
   box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
@@ -1512,10 +1534,6 @@ select::-ms-expand {
   clear: both !important;
 }
 
-.c-switch__label {
-  font-weight: 600;
-}
-
 .c-switch__input:checked + .c-switch__slider {
   background-color: #39c49f;
 }
@@ -1530,12 +1548,11 @@ select::-ms-expand {
 }
 
 .c-switch__input:focus + .c-switch__slider {
+  outline: none;
   box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px #7342ab;
 }
 
 .c-switch__slider {
-  position: relative;
-  top: -1px;
   float: left;
   display: inline-block;
   cursor: pointer;
@@ -1644,6 +1661,7 @@ select::-ms-expand {
   color: #fff;
   background-color: #7342ab;
   box-shadow: none;
+  outline: none;
 }
 
 .c-tabs__link--ko {
@@ -1842,6 +1860,8 @@ select::-ms-expand {
   width: auto;
   height: auto;
   z-index: 900;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  outline: none;
 }
 
 .u-border-top {
