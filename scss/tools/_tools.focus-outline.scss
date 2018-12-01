@@ -1,0 +1,17 @@
+// # Tools: Focus Outline
+// -----------------------------------------------------------------------------
+
+// Adds an outline to focused elements
+
+@mixin focus-outline($border-radius: false) {
+	@if $border-radius {
+		outline: none;
+		box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px $color-primary;
+	}
+	@else {
+		outline-width: 2px;
+		outline-color: $color-primary;
+		outline-style: solid;
+		outline-offset: 2px;
+	}
+}

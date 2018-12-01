@@ -3,8 +3,7 @@
 
 button {
 	&:focus {
-		box-shadow: 0 0 0 2px $color-primary;
-		outline: none;
+		@include focus-outline(true);
 	}
 }
 
@@ -140,10 +139,6 @@ select {
 	-webkit-appearance: none;
 }
 
-@mixin range-focus {
-	box-shadow: inset 0 0 0 1px #fff, 0 0 0 2px $color-primary;
-}
-
 [type="range"] {
 	margin: 0;
 	width: 100%;
@@ -153,19 +148,19 @@ select {
 		outline: 0;
 
 		&::-webkit-slider-runnable-track {
-			@include range-focus;
+			@include focus-outline(true);
 		}
 
 		&::-moz-range-track {
-			@include range-focus;
+			@include focus-outline(true);
 		}
 
 		&::-ms-fill-lower {
-			@include range-focus;
+			@include focus-outline(true);
 		}
 
 		&::-ms-fill-upper {
-			@include range-focus;
+			@include focus-outline(true);
 		}
 	}
 
@@ -190,7 +185,7 @@ select {
 	}
 
 	&::-ms-fill-lower {
-		@includerange- track;
+		@include range-track;
 	}
 
 	&::-ms-fill-upper {
