@@ -1,0 +1,35 @@
+// # Components: Header
+// -----------------------------------------------------------------------------
+
+.c-site-header {
+	display: flex;
+	flex: 0 0 auto;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $color-primary;
+	padding-left: $global-spacing-unit;
+	padding-right: $global-spacing-unit;
+}
+
+.c-site-header__nav {
+	display: flex;
+	flex: 0 0 auto;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.c-site-header__logo {
+	margin-right: $global-spacing-unit;
+}
+
+
+
+// ## Page Headers
+// -----------------------------------------------------------------------------
+
+.c-page-header {
+	background-color: $color-primary--faint;
+	box-shadow: $dropshadow--light;
+}

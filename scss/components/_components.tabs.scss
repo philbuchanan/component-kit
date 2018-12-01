@@ -1,0 +1,82 @@
+// # Components: Tabs
+// -----------------------------------------------------------------------------
+
+.c-tabs {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.c-tabs__link {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $color-text;
+	text-decoration: none;
+	height: 48px;
+	padding-left: $global-spacing-unit-small;
+	padding-right: $global-spacing-unit-small;
+	cursor: pointer;
+	transition: border $duration-fast;
+
+	&:hover,
+	&:focus,
+	&.is-open,
+	&.is-selected {
+		color: $color-text;
+
+		&:before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: $color-primary;
+			content: "";
+			width: 100%;
+			height: 3px;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: $color-primary;
+		box-shadow: none;
+	}
+}
+
+.c-tabs__link--ko {
+	color: #fff;
+
+	&:hover,
+	&:focus,
+	&.is-open,
+	&.is-selected {
+		color: #fff;
+
+		&:before {
+			background-color: $color-secondary;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-primary;
+		background-color: $color-secondary;
+		box-shadow: none;
+	}
+}
+
+.c-tabs__link--notifications {
+	background-image: url("images/icons/bell-ko.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 16px 16px;
+	width: 40px;
+
+	&.is-selected,
+	&:hover,
+	&:focus {
+		background-image: url("images/icons/bell.svg");
+	}
+}

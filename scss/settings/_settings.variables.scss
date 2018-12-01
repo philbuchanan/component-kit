@@ -28,6 +28,13 @@ $color-hover-bg:                    rgba($color-primary, 0.07);
 
 
 
+// ### Color Tints
+// -----------------------------------------------------------------------------
+
+$color-primary--faint:              #faf8fc; // 4% opacity of $color-primary
+
+
+
 // ## Typography
 // -----------------------------------------------------------------------------
 
@@ -43,12 +50,12 @@ $global-spacing-unit-small:         round($global-spacing-unit * 0.5);
 $global-spacing-unit-large:         round($global-spacing-unit * 1.5);
 $global-spacing-unit-huge:          round($global-spacing-unit * 2);
 
-$font-size-h1:                      1.85rem;
-$font-size-h2:                      1.4rem;
-$font-size-h3:                      1.15rem;
+$font-size-h1:                      1.7rem;
+$font-size-h2:                      1.3rem;
+$font-size-h3:                      1.1rem;
 $font-size-h4:                      1rem;
 $font-size-h5:                      0.9rem;
-$font-size-h6:                      0.85rem;
+$font-size-h6:                      0.8rem;
 
 $font-weight-light:                 300;
 $font-weight-normal:                400;
@@ -59,31 +66,26 @@ $font-weight-bold:                  600;
 // ## Grid
 // -----------------------------------------------------------------------------
 
-$wrapper-width:                     85.72em;
+$wrapper-width:                     86em;
 $fractions:                         (12);
 $total-block-grid-columns:          5;
 $gutter:                            15px;
 
 // Breakpoints
-$breakpoint-nav:                    54.86em;
+$breakpoint-nav:                    55em;
 
 $breakpoints: (
 	// No suffix on classes for < 475px
-	sm:  33.93em,
-	md:  45.72em,
-	lg:  64.29em,
-	xl:  $wrapper-width
+	sm: 34em,
+	md: 46em,
+	lg: 64em,
+	xl: $wrapper-width
 );
 
 
 
 // ## Properties & Sizes
 // -----------------------------------------------------------------------------
-
-$properties: (
-	margin,
-	padding,
-);
 
 $sides: (
 	top,

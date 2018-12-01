@@ -40,18 +40,58 @@ h6,
 	letter-spacing: 0.025em;
 }
 
-strong {
+p {}
+
+strong, b {
 	font-weight: $font-weight-bold;
 }
 
-em {
+em, i {
 	font-style: italic;
+}
+
+blockquote {}
+
+q {
+	quotes: "\201c" "\201d" "\2018" "\2019";
+
+	&:before {
+		content: open-quote;
+	}
+
+	&:after {
+		content: close-quote;
+	}
+}
+
+cite {
+	font-style: italic;
+}
+
+caption {
+	font-style: italic;
+}
+
+kbd,
+code,
+var {
+	color: #96268a;
+	background-color: $grey-faint;
+	font-family: $font-family-mono;
+	font-size: $font-size-h5;
+	border: 1px solid $color-border--light;
+	border-radius: 2px;
+	padding: 0.1em 0.25em;
+}
+
+kbd {
+	border-bottom-width: 3px;
 }
 
 sub,
 sup {
 	vertical-align: baseline;
-	font-size: 0.8em;
+	font-size: 0.8125em;
 	position: relative;
 	top: -0.5em;
 }
@@ -68,23 +108,28 @@ del {
 	text-decoration: line-through;
 }
 
+big {
+	font-size: $font-size-h1;
+}
+
 small {
 	font-size: $font-size-h6;
 }
 
-code {
-	color: #96268a;
-	background-color: $grey-faint;
-	font-family: $font-family-mono;
-	border: 1px solid $color-border--light;
-	border-radius: 2px;
-	padding: 0.1em 0.25em;
+dfn {
+	font-style: italic;
+}
+
+abbr {
+	border-bottom: 1px dotted currentColor;
 }
 
 hr {
 	border: solid $color-border--light;
 	border-width: 1px 0 0;
 	height: 0;
+	margin-top: $global-spacing-unit-large;
+	margin-bottom: $global-spacing-unit-large;
 }
 
 
