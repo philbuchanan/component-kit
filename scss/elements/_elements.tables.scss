@@ -15,6 +15,22 @@ thead {
 	}
 }
 
+tfoot {
+	border-top: 2px solid $color-border--light;
+
+	th {
+		vertical-align: top;
+	}
+}
+
+thead,
+tfoot {
+	th {
+		padding-top: $global-spacing-unit-tiny;
+		padding-bottom: $global-spacing-unit-tiny;
+	}
+}
+
 th,
 td {
 	text-align: left;
