@@ -302,8 +302,23 @@ table {
 thead {
   border-bottom: 2px solid #e5e5e5;
 }
+
 thead th {
   vertical-align: bottom;
+}
+
+tfoot {
+  border-top: 2px solid #e5e5e5;
+}
+
+tfoot th {
+  vertical-align: top;
+}
+
+thead th,
+tfoot th {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 th,

@@ -39,7 +39,8 @@
 .c-table--compact {
 	th,
 	td {
-		padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+		padding-top: $global-spacing-unit-tiny;
+		padding-bottom: $global-spacing-unit-tiny;
 	}
 }
 

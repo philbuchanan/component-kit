@@ -478,17 +478,21 @@
 				<table class="c-table--ruled">
 					<thead>
 						<tr>
-							<th class="c-table__column--sortable">#</th>
-							<th class="c-table__column--sortable">First Name</th>
-							<th class="c-table__column--sortable">Last Name <img src="images/sort-asc.svg" alt="" width="9" height="5"></th>
-							<th>Email Address</th>
-							<th>Phone Number</th>
-							<th>Contact Method</th>
+							<th></th>
+							<th colspan="5">Person Details</th>
+						</tr>
+						<tr>
+							<th class="c-table__column--sortable" scope="col">#</th>
+							<th class="c-table__column--sortable" scope="col">First Name</th>
+							<th class="c-table__column--sortable" scope="col">Last Name <img src="images/sort-asc.svg" alt="" width="9" height="5"></th>
+							<th scope="col">Email Address</th>
+							<th scope="col">Phone Number</th>
+							<th scope="col">Contact Method</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th>1</th>
+							<th scope="row">1</th>
 							<td>Amy</td>
 							<td>Brooks</td>
 							<td>amybrooks@gmail.com</td>
@@ -496,7 +500,7 @@
 							<td>Email</td>
 						</tr>
 						<tr>
-							<th>2</th>
+							<th scope="row">2</th>
 							<td>Carolyn</td>
 							<td>Chapman</td>
 							<td>c.chapman@sterlingindustries.com</td>
@@ -504,7 +508,7 @@
 							<td>Phone</td>
 						</tr>
 						<tr>
-							<th>3</th>
+							<th scope="row">3</th>
 							<td>Rachel</td>
 							<td>Fowler</td>
 							<td>rfowler@tempagency.com</td>
@@ -512,7 +516,7 @@
 							<td>Email</td>
 						</tr>
 						<tr>
-							<th>4</th>
+							<th scope="row">4</th>
 							<td>Christian</td>
 							<td>Henry</td>
 							<td>christian.henry@gmail.com</td>
@@ -520,7 +524,7 @@
 							<td>Email</td>
 						</tr>
 						<tr>
-							<th>5</th>
+							<th scope="row">5</th>
 							<td>Douglas</td>
 							<td>Warren</td>
 							<td>douglas82@gmail.com</td>
@@ -528,6 +532,16 @@
 							<td>Email</td>
 						</tr>
 					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">First Name</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">Email Address</th>
+							<th scope="col">Phone Number</th>
+							<th scope="col">Contact Method</th>
+						</tr>
+					</tfoot>
 				</table>
 			</div>
 			<div class="o-box">
