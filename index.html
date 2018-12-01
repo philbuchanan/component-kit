@@ -9,26 +9,28 @@
 	<body>
 		<a class="u-sr-only u-skip-link" href="#content">Skip to content</a>
 		<main id="content">
-			<header>
-				<nav class="c-nav-bar">
-					<img src="images/logos/reflectivity-logo.svg" alt="Reflectivity logo" width="22" height="32" class="c-nav-bar__logo">
-					<ul class="o-list-bare o-list-inline u-pull-left">
-						<li class="o-list-inline__item">
-							<a class="c-nav-bar__link" href="#">Elements</a>
+			<header class="c-site-header">
+				<nav class="c-site-header__nav">
+					<img src="images/logos/reflectivity-logo.svg" alt="Reflectivity logo" width="22" height="32" class="c-site-header__logo">
+					<ul class="o-list-bare c-tabs">
+						<li class="c-tabs__item">
+							<a class="c-tabs__link c-tabs__link--ko" href="#">Elements</a>
 						</li>
-						<li class="o-list-inline__item">
-							<a class="c-nav-bar__link" href="#">Objects</a>
+						<li class="c-tabs__item">
+							<a class="c-tabs__link c-tabs__link--ko" href="#">Objects</a>
 						</li>
-						<li class="o-list-inline__item">
-							<a class="c-nav-bar__link is-selected" href="#">Components</a>
+						<li class="c-tabs__item">
+							<a class="c-tabs__link c-tabs__link--ko is-selected" href="#">Components</a>
 						</li>
-						<li class="o-list-inline__item">
-							<a class="c-nav-bar__link" href="#">Utilities</a>
+						<li class="c-tabs__item">
+							<a class="c-tabs__link c-tabs__link--ko" href="#">Utilities</a>
 						</li>
 					</ul>
-					<ul class="o-list-bare o-list-inline u-pull-right">
-						<li class="o-list-inline__item">
-							<button class="o-button-bare c-nav-bar__link c-nav-bar__link--notifications">
+				</nav>
+				<nav class="c-site-header__nav">
+					<ul class="o-list-bare c-tabs">
+						<li class="c-tabs__item">
+							<button class="o-button-bare c-tabs__link c-tabs__link--ko c-tabs__link--notifications">
 								<span class="u-sr-only">No unread notifications</span>
 							</button>
 							<div class="o-container o-container--xs c-dropdown" data-position="bottom-end">
@@ -38,8 +40,8 @@
 								</div>
 							</div>
 						</li>
-						<li class="o-list-inline__item">
-							<button class="o-button-bare c-button--dropdown c-nav-bar__link">
+						<li class="c-tabs__item">
+							<button class="o-button-bare c-button--dropdown c-tabs__link c-tabs__link--ko">
 								<span class="u-text-truncate">CC</span>
 							</button>
 							<div class="o-container o-container--xxs c-dropdown" data-position="bottom-end">
@@ -60,15 +62,32 @@
 					</ul>
 				</nav>
 			</header>
+			<header class="c-page-header">
+				<div class="o-box u-no-padding-bottom">
+					<h1>Components</h1>
+					<nav>
+						<ul class="o-list-bare c-tabs">
+							<li class="c-tabs__item">
+								<a href="#" class="c-tabs__link">Buttons</a>
+							</li>
+							<li class="c-tabs__item">
+								<a href="#" class="c-tabs__link is-selected">Modals</a>
+							</li>
+							<li class="c-tabs__item">
+								<a href="#" class="c-tabs__link">Alerts</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 			<div class="o-box u-border-bottom">
-				<h1>Component Kit</h1>
 				<p>A modular, scalable, Sass-based, OOCSS framework for quick development of web application interfaces.</p>
 			</div>
 			<div class="o-box u-border-bottom">
 				<h2>Typography</h2>
-				<h1>Main heading</h1>
-				<h2>Subpage title</h2>
-				<h3>Section header</h3>
+				<h1>Main Heading</h1>
+				<h2>Subpage Title</h2>
+				<h3>Section Header</h3>
 				<h4>Labels</h4>
 				<p><strong>Bold content within body</strong></p>
 				<p>The children groped their way back to the spring. The weary time dragged on; they slept again, and awoke famished and woe-stricken. <a href="#">Tom believed it must be Tuesday</a> by this time.</p>
@@ -137,7 +156,7 @@
 							<div class="c-modal__container">
 								<div class="o-box">
 									<h2>Your Two-Factor Secret Key</h2>
-									<p class="u-text-big"><code>sedw gyiu kptt oqvu</code></p>
+									<p><code class="u-text-big">sedw gyiu kptt oqvu</code></p>
 								</div>
 								<button class="o-button-bare c-button-close js-close-2fa-modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
