@@ -1,41 +1,46 @@
 // # Elements: Typography
 // -----------------------------------------------------------------------------
 
+h1, c-h1,
+h2, c-h2,
+h3, c-h3,
+h6, c-h4,
+h5, c-h5,
+h6, c-h6 {
+	line-height: 1.2;
+	font-weight: $font-weight-bold;
+}
+
+
 h1,
 .c-h1 {
 	font-size: $font-size-h1;
-	font-weight: $font-weight-bold;
 }
 
 h2,
 .c-h2 {
 	font-size: $font-size-h2;
-	font-weight: $font-weight-bold;
 }
 
 h3,
 .c-h3 {
 	font-size: $font-size-h3;
-	font-weight: $font-weight-bold;
 }
 
 h4,
 .c-h4 {
 	font-size: $font-size-h4;
-	font-weight: $font-weight-bold;
 }
 
 h5,
 .c-h5 {
 	font-size: $font-size-h5;
-	font-weight: $font-weight-bold;
 	text-transform: uppercase;
 }
 
 h6,
 .c-h6 {
 	font-size: $font-size-h6;
-	font-weight: $font-weight-bold;
 	text-transform: uppercase;
 	letter-spacing: 0.025em;
 }

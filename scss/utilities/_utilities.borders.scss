@@ -1,8 +1,31 @@
 // # Utilities: Borders
 // -----------------------------------------------------------------------------
 
+$sides: (
+	top,
+	bottom,
+	left,
+	right,
+);
+
 @each $side in $sides {
 	.u-border-#{$side} {
 		border-#{$side}: 1px solid $color-border--light !important;
+	}
+}
+
+@each $name, $size in $breakpoints {
+	@include respond-to(#{$name}) {
+		$suffix: "-#{$name}";
+
+		@each $side in $sides {
+			.u-border-#{$side}#{$suffix} {
+				border-#{$side}: 1px solid $color-border--light !important;
+			}
+
+			.u-no-border-#{$side}#{$suffix} {
+				border-#{$side}: none !important;
+			}
+		}
 	}
 }

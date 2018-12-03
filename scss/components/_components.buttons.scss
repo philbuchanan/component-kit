@@ -44,6 +44,10 @@
 	}
 }
 
+.c-button__icon {
+	margin-right: $global-spacing-unit-tiny;
+}
+
 
 
 // ## Button Alternates
@@ -115,10 +119,6 @@
 
 // ## Button Modifiers
 // -----------------------------------------------------------------------------
-
-.c-button--full-width {
-	width: 100%;
-}
 
 .c-button--dropdown {
 	&:after {

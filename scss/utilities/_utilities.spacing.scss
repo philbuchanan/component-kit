@@ -1,12 +1,45 @@
 // # Utilities: Spacing
 // -----------------------------------------------------------------------------
 
-// ## Margin Spacing Resets
-// -----------------------------------------------------------------------------
+// Helper classes for working with, or removing margins and padding
 
-.u-no-margin-bottom {
-	margin-bottom: 0 !important;
+$properties: (
+	margin,
+);
+
+$sides: (
+	bottom,
+);
+
+$sizes: (
+	sm: $global-spacing-unit-small,
+	md: $global-spacing-unit,
+	lg: $global-spacing-unit-large,
+);
+
+// Add utilities for each property
+@each $prop in $properties {
+
+	// Add property utility for each side
+	@each $side in $sides {
+
+		// Add property utility for each size
+		@each $size, $dimension in $sizes {
+			.u-#{$prop}-#{$side}-#{$size} {
+				#{$prop}-#{$side}: #{$dimension} !important;
+			}
+		}
+
+		.u-no-#{$prop}-#{$side} {
+			#{$prop}-#{$side}: 0 !important;
+		}
+	}
 }
+
+
+
+// ## Additional Spacing Resets
+// -----------------------------------------------------------------------------
 
 .u-no-padding-bottom {
 	padding-bottom: 0 !important;
