@@ -2,18 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Projects | Reflectivity</title>
+		<title>Wayne Enterprises | Reflectivity</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="../../style.css">
 	</head>
 	<body>
 		<a class="u-sr-only u-skip-link" href="#content">Skip to content</a>
 		<header class="c-site-header">
 			<nav class="c-site-header__nav">
-				<img src="../images/logos/reflectivity-icon.svg" alt="Reflectivity logo" width="22" height="32" class="c-site-header__logo">
+				<img src="../../images/logos/reflectivity-icon.svg" alt="Reflectivity logo" width="22" height="32" class="c-site-header__logo">
 				<ul class="o-list-bare c-tabs">
 					<li class="c-tabs__item">
-						<a class="c-tabs__link c-tabs__link--ko is-selected" href="#">Projects</a>
+						<a class="c-tabs__link c-tabs__link--ko" href="../project-list.html">Projects</a>
 					</li>
 				</ul>
 			</nav>
@@ -40,44 +40,56 @@
 			</nav>
 		</header>
 		<header class="c-page-header">
-			<div class="o-box">
-				<h1>Projects</h1>
+			<div class="o-box u-no-padding-bottom">
+				<h1>Wayne Enterprises</h1>
+				<nav>
+					<ul class="o-list-bare c-tabs">
+						<li class="c-tabs__item">
+							<a href="index.html" class="c-tabs__link ">Documents</a>
+						</li>
+						<li class="c-tabs__item">
+							<a href="people.html" class="c-tabs__link  is-selected">People</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
+
 		<main id="content">
-		
 			<div class="o-container--responsive o-box">
 				
+				<div class="c-alert" role="alert">
+					<div class="o-box o-box--small">
+						<p>To manage people in this project, please contact <a href="#">support@reflectivity.io</a>.</p>
+					</div>
+				</div>
+
 				<table class="c-table--ruled">
 					<thead>
 						<tr>
-							<th class="c-table__column--sortable" scope="col">Project Name <img src="../images/sort-asc.svg" alt="" width="9" height="5"></th>
+							<th class="c-table__column--sortable" scope="col">Name <img src="../../images/sort-asc.svg" alt="" width="9" height="5"></th>
+							<th scope="col">Email</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
+							<td>Bruce Wayne</td>
 							<td>
-								<a href="project/index.html">Lex Corp</a>  
+								<a href="#">bruce@waynecorp.com</a>  
 							</td>
 						</tr>
 						<tr>
+							<td>Lucius Fox</td>
 							<td>
-								<a href="project/index.html">Star Labs</a>	
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="project/index.html">Wayne Enterprises</a>	
+								<a href="#">lucius@waynecorp.com</a>  
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div> 
 			
-			<a href="project-list-empty-state.html"> Empty state</a>
-			
 		</main>
-		<script src="../js/popper.js"></script>
-		<script src="../js/scripts.js"></script>
+		<script src="../../js/popper.js"></script>
+		<script src="../../js/scripts.js"></script>
 	</body>
 </html>
