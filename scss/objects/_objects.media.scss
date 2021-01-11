@@ -5,22 +5,18 @@
 // http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
 
 .o-media {
-	@include clearfix();
-	display: block;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
 }
 
 .o-media__img {
-	float: left;
+	flex-shrink: 0;
 	margin-right: $global-spacing-unit;
-
-	> img {
-		display: block;
-	}
 }
 
 .o-media__body {
-	overflow: hidden;
-	display: block;
+	flex-grow: 1;
 
 	&,
 	> :last-child {
@@ -28,36 +24,56 @@
 	}
 }
 
-
-
 // ## Size Variants
 // -----------------------------------------------------------------------------
 
 // Modify the amount of space between our image and our text. We also have
 // reversible options for all available sizes.
 
+.o-media--sm {
+	> .o-media__img {
+		margin-right: $global-spacing-unit-small;
+	}
 
-// Gutterless media objects.
+	&.o-media--reverse {
+		> .o-media__img {
+			margin-left: $global-spacing-unit-small;
+		}
+	}
+}
+
+.o-media--lg {
+	> .o-media__img {
+		margin-right: $global-spacing-unit-large;
+	}
+
+	&.o-media--reverse {
+		> .o-media__img {
+			margin-left: $global-spacing-unit-large;
+		}
+	}
+}
+
+// ## Reverse Media object
+// -----------------------------------------------------------------------------
+
+// Reversed image location (right instead of left).
+
+.o-media--reverse {
+	flex-direction: row-reverse;
+
+	> .o-media__img {
+		margin-right: 0;
+		margin-left: $global-spacing-unit;
+	}
+}
+
+// ## Gutterless Media objects
+// -----------------------------------------------------------------------------
 
 .o-media--flush {
 	> .o-media__img {
 		margin-right: 0;
 		margin-left: 0;
-	}
-}
-
-
-
-.o-media--small {
-	> .o-media__img {
-		margin-right: $global-spacing-unit-small;
-	}
-}
-
-
-
-.o-media--large {
-	> .o-media__img {
-		margin-right: $global-spacing-unit-large;
 	}
 }
